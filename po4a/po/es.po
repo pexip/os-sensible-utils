@@ -1,10 +1,10 @@
 # sensible-utils manpages po translation to Spanish
-# Copyright (C) 2010 Software in the Public Interest
+# Copyright (C) 2010, 2011 Software in the Public Interest
 # This file is distributed under the same license as the sensible-utils package.
 #
 # Changes:
 #   - Initial translation
-#       Omar Campagne <ocampagne@gmail.com>
+#       Omar Campagne <ocampagne@gmail.com> 2010, 2011
 #
 #   - Updates
 #       TRANSLATOR
@@ -29,9 +29,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sensible-utils 0.0.4\n"
+"Project-Id-Version: sensible-utils 0.0.6\n"
 "POT-Creation-Date: 2010-11-14 01:14-0500\n"
-"PO-Revision-Date: 2010-10-22 14:00+0200\n"
+"PO-Revision-Date: 2011-07-16 16:51+0200\n"
 "Last-Translator: Omar Campagne <ocampagne@gmail.com>\n"
 "Language-Team: Debian l10n Spanish <debian-l10n-spanish@lists.debian.org>\n"
 "Language: es\n"
@@ -52,7 +52,7 @@ msgstr "SENSIBLE-EDITOR"
 #: ../sensible-editor.1:2
 #, no-wrap
 msgid "14 Nov 2010"
-msgstr ""
+msgstr "14 de Noviembre de 2010"
 
 # type: TH
 #. type: TH
@@ -135,16 +135,9 @@ msgstr "VÉASE TAMBIÉN"
 # type: Plain text
 #. type: Plain text
 #: ../sensible-editor.1:19
-#, fuzzy
-#| msgid ""
-#| "Documentation of the EDITOR, PAGER, and BROWSER variables in B<environ>(7)"
 msgid ""
 "Documentation of the EDITOR, VISUAL, PAGER, and BROWSER variables in "
 "B<environ>(7)"
 msgstr ""
-"Consulte la documentación de las variables de entorno EDITOR, PAGER y "
-"BROWSER en B<environ>(7)."
-
-# type: TH
-#~ msgid "03 Mar 2004"
-#~ msgstr "3 de Marzo, 2004"
+"Consulte la documentación de las variables de entorno EDITOR, VISUAL "
+"PAGER y BROWSER en B<environ>(7)."

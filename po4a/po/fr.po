@@ -116,16 +116,9 @@ msgstr "VOIR AUSSI"
 # type: Plain text
 #. type: Plain text
 #: ../sensible-editor.1:19
-#, fuzzy
-#| msgid ""
-#| "Documentation of the EDITOR, PAGER, and BROWSER variables in B<environ>(7)"
 msgid ""
 "Documentation of the EDITOR, VISUAL, PAGER, and BROWSER variables in "
 "B<environ>(7)"
 msgstr ""
 "La documentation des variables d'environnement EDITOR, VISUAL, PAGER, et BROWSER se "
 "trouve dans B<environ>(7)."
-
-# type: TH
-#~ msgid "03 Mar 2004"
-#~ msgstr "03 mars 2004"
