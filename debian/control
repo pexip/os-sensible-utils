@@ -1,11 +1,13 @@
 Source: sensible-utils
 Section: utils
 Priority: required
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Maintainer: Pexip AS <packaging@pexip.com>
+XSBC-Pexip-Original-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 XSBC-Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
 Standards-Version: 3.9.1
 Vcs-Git: git://git.debian.org/git/private/schizo/sensible-utils.git
 Vcs-Browser: http://git.debian.org/?p=private/schizo/sensible-utils.git
+XS-Pexip-Upstream: http://archive.ubuntu.com/ubuntu/ precise
 
 Package: sensible-utils
 Architecture: all

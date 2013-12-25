@@ -1,3 +1,9 @@
+sensible-utils (0.0.6ubuntu2pexip1) pexip; urgency=low
+
+  * Prepare Pexip packaging
+
+ -- John-Mark Bell <jmb@pexip.com>  Wed, 25 Dec 2013 04:41:28 +0000
+
 sensible-utils (0.0.6ubuntu2) natty; urgency=low
 
   * Makefile.in: add select-editor and its manpage, LP: #682997
