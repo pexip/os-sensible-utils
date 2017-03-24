@@ -29,9 +29,11 @@ if [ $editors -gt 1 ]; then
 		if [ -z "$selected" -a ! -z "$simple" ]; then
 			selected="$simple"
 		elif ! test $selected -gt 0 2>/dev/null; then
-			read -p "`gettext 'Choose'` 1-$i [$simple]: " -r selected
+			echo -n "$(gettext 'Choose') 1-$i [$simple]: "
+			read -r selected
 		elif ! test $selected -le $i 2>/dev/null; then
-			read -p "`gettext 'Choose'` 1-$i [$simple]: " -r selected
+			echo -n "$(gettext 'Choose') 1-$i [$simple]: "
+			read -r selected
 		else
 			break
 		fi

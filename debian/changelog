@@ -1,3 +1,55 @@
+sensible-utils (0.0.9pexip1) pexip; urgency=low
+
+  * Migrate to Jessie
+
+ -- John-Mark Bell <jmb@pexip.com>  Fri, 24 Mar 2017 15:19:48 +0000
+
+sensible-utils (0.0.9) unstable; urgency=low
+
+  * Fix bashism in select-editor
+    Patch by Thorsten Glaser
+    Closes: #711321
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Thu, 06 Jun 2013 22:19:39 +1000
+
+sensible-utils (0.0.8) unstable; urgency=low
+
+  * Merge 0.0.7ubuntu1 
+    - add select-editor (Closes: #482774)
+    - modify sensible-editor to pick the editor from select-editor
+  * Removes reference to non-existent BROWSER documentation in environ(7)
+    Patch by Matt Kraai
+    Closes: #567250
+  * Commented-out Vcs-* headers
+    Closes: #661752
+  * Standards Version is 3.9.4
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Thu, 06 Jun 2013 12:27:15 +1000
+
+sensible-utils (0.0.7ubuntu1) quantal; urgency=low
+
+  * Merge from Debian unstable. Remaining changes:
+    - add select-editor (forwarded as bug #482774)
+    - modify sensible-editor to pick the editor from select-editor
+
+ -- Logan Rosen <logatronico@gmail.com>  Wed, 11 Jul 2012 23:32:04 -0400
+
+sensible-utils (0.0.7) unstable; urgency=low
+
+  [ David Prévot <taffit@debian.org> ]
+  * set Multi-Arch: foreign. Closes: #666102
+  * French, by David Prévot. Closes: #603883
+  * German, by Helge Kreutzmann. Closes: #625897
+  * Spanish, by Omar Campagne. Closes: #636239
+  * Japanese, by KURASAWA Nozomu. Closes: #650641
+  * Italian, by Beatrice Torracca. Closes: #672650
+
+  [ Anibal Monsalve Salazar ]
+  * Fix out-of-date-standards-version
+  * Fix debian-rules-missing-recommended-target
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Mon, 14 May 2012 17:23:27 +1000
+
 sensible-utils (0.0.6ubuntu2pexip1) pexip; urgency=low
 
   * Prepare Pexip packaging
