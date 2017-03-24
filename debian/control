@@ -7,7 +7,7 @@ XSBC-Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
 Standards-Version: 3.9.1
 Vcs-Git: git://git.debian.org/git/private/schizo/sensible-utils.git
 Vcs-Browser: http://git.debian.org/?p=private/schizo/sensible-utils.git
-XS-Pexip-Upstream: http://archive.ubuntu.com/ubuntu/ precise
+XS-Pexip-Upstream: http://ftp.debian.org/debian/ jessie
 
 Package: sensible-utils
 Architecture: all
