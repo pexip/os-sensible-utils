@@ -1,4 +1,4 @@
-sensible-utils (0.0.9+deb8u1) jessie-security; urgency=high
+sensible-utils (0.0.9+deb9u1) stretch-security; urgency=high
 
   * Non-maintainer upload by the Security Team.
   * Argument injection in sensible-browser (CVE-2017-17512)
