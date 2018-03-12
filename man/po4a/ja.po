@@ -1,0 +1,127 @@
+# Japanese translations for po package
+# Copyright (C) 2010 Free Software Foundation, Inc.
+# This file is distributed under the same license as the po package.
+# Automatically generated, 2010.
+# KURASAWA Nozomu <nabetaro@debian.or.jp>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: po 4a\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-08-11 09:11+0200\n"
+"PO-Revision-Date: 2011-02-11 15:07+0900\n"
+"Last-Translator: KURASAWA Nozomu <nabetaro@caldron.jp>\n"
+"Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Virtaal 0.5.2\n"
+
+#. type: TH
+#: sensible-editor.man
+#, no-wrap
+msgid "SENSIBLE-EDITOR"
+msgstr "SENSIBLE-EDITOR"
+
+#. type: TH
+#: sensible-editor.man
+#, no-wrap
+msgid "14 Nov 2010"
+msgstr "14 Nov 2010"
+
+#. type: TH
+#: sensible-editor.man
+#, no-wrap
+msgid "Debian"
+msgstr "Debian"
+
+#. type: SH
+#: sensible-editor.man
+#, no-wrap
+msgid "NAME"
+msgstr "名前"
+
+#. type: Plain text
+#: sensible-editor.man
+msgid ""
+"sensible-editor, sensible-pager, sensible-browser - sensible editing, "
+"paging, and web browsing"
+msgstr ""
+"sensible-editor, sensible-pager, sensible-browser - 気の利いたエディタ、ペー"
+"ジャ、ウェブブラウザ"
+
+#. type: SH
+#: sensible-editor.man
+#, no-wrap
+msgid "SYNOPSIS"
+msgstr "書式"
+
+#. type: Plain text
+#: sensible-editor.man
+msgid "B<sensible-editor> [OPTIONS...]"
+msgstr "B<sensible-editor> [OPTIONS...]"
+
+#. type: Plain text
+#: sensible-editor.man
+msgid "B<sensible-pager> [OPTIONS...]"
+msgstr "B<sensible-pager> [OPTIONS...]"
+
+#. type: Plain text
+#: sensible-editor.man
+msgid "B<sensible-browser> url"
+msgstr "B<sensible-browser> url"
+
+#. type: SH
+#: sensible-editor.man
+#, no-wrap
+msgid "DESCRIPTION"
+msgstr "説明"
+
+#. type: Plain text
+#: sensible-editor.man
+msgid ""
+"B<sensible-editor>, B<sensible-pager> and B<sensible-browser> make sensible "
+"decisions on which editor, pager, and web browser to call, respectively.  "
+"Programs in Debian can use these scripts as their default editor, pager, or "
+"web browser or emulate their behavior."
+msgstr ""
+"B<sensible-editor>, B<sensible-pager>, B<sensible-browser> は、どのエディタ、"
+"ページャ、ウェブブラウザを使用するかを、それぞれ気の利いた選択をしてくれま"
+"す。Debian にあるプログラムは、デフォルトのエディタ、ページャ、ウェブブラウザ"
+"としてこのスクリプトを使えますし、その振る舞いをエミュレートできます。"
+
+#. type: SH
+#: sensible-editor.man
+#, no-wrap
+msgid "SEE ALSO"
+msgstr "関連項目"
+
+#. type: Plain text
+#: sensible-editor.man
+#, fuzzy
+#| msgid ""
+#| "Documentation of the EDITOR, VISUAL, PAGER, and BROWSER variables in "
+#| "B<environ>(7)"
+msgid ""
+"Documentation of the EDITOR, VISUAL and PAGER variables in B<environ>(7)  "
+"and B<select-editor>(1)  for changing a user's default editor"
+msgstr ""
+"B<environ>(7) にある環境変数 EDITOR, VISUAL, PAGER, BROWSER のドキュメント"
+
+#. type: SH
+#: sensible-editor.man
+#, no-wrap
+msgid "STANDARD"
+msgstr ""
+
+#. type: Plain text
+#: sensible-editor.man
+msgid ""
+"Documentation of behavior of sensible-utils under a debian system is "
+"available under section 11.4 of debian-policy usually installed under /usr/"
+"share/doc/debian-policy (you might need to install debian-policy)"
+msgstr ""
+
+#~ msgid "03 Mar 2004"
+#~ msgstr "03 Mar 2004"

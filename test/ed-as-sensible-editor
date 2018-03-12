@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+TEMPFILE=$(mktemp -p "")
+echo $TEMPFILE
+trap "rm -rf $TEMPFILE" HUP INT QUIT TERM STOP PWR EXIT
+
+EDITOR=ed sensible-editor "$TEMPFILE" <<EOF
+a
+test
+.
+w
+q
+EOF

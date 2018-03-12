@@ -1,0 +1,149 @@
+# French translation of the debianutils' man pages
+# Traduction des pages de manuel du paquet debianutils
+#
+# Copyright (C) 2004 Software in the Public Interest
+# This file is distributed under the same license as the debianutils package.
+#
+# Reprise des traduction originelles de which.1 (Laëtitia Groslong)
+#
+# Nicolas FRANÇOIS <nicolas.francois@centaliens.net>, 2004.
+# et savelog.8 (Antoine Gémis, 13 janvier 2003).
+# Bastien ROUCARIÈS <roucaries.bastien+debian@gmail.com>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: debianutils\n"
+"POT-Creation-Date: 2017-08-11 09:11+0200\n"
+"PO-Revision-Date: 2017-08-10 22:25+0100\n"
+"Last-Translator: Bastien ROUCARIÈS <roucaries.bastien+debian@gmail.com>\n"
+"Language-Team: French <kde-i18n-doc@kde.org>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 2.0\n"
+
+# type: TH
+#. type: TH
+#: sensible-editor.man
+#, no-wrap
+msgid "SENSIBLE-EDITOR"
+msgstr "SENSIBLE-EDITOR"
+
+#. type: TH
+#: sensible-editor.man
+#, no-wrap
+msgid "14 Nov 2010"
+msgstr "14 novembre 2010"
+
+# type: TH
+#. type: TH
+#: sensible-editor.man
+#, no-wrap
+msgid "Debian"
+msgstr "Debian GNU/Linux"
+
+# type: SH
+#. type: SH
+#: sensible-editor.man
+#, no-wrap
+msgid "NAME"
+msgstr "NOM"
+
+# type: Plain text
+#. type: Plain text
+#: sensible-editor.man
+msgid ""
+"sensible-editor, sensible-pager, sensible-browser - sensible editing, "
+"paging, and web browsing"
+msgstr ""
+"sensible-editor, sensible-pager, sensible-browser - outils pratiques "
+"d'édition, de mise en page et de navigation sur le web"
+
+# type: SH
+#. type: SH
+#: sensible-editor.man
+#, no-wrap
+msgid "SYNOPSIS"
+msgstr "SYNOPSIS"
+
+# type: Plain text
+#. type: Plain text
+#: sensible-editor.man
+msgid "B<sensible-editor> [OPTIONS...]"
+msgstr "B<sensible-editor> [OPTIONS...]"
+
+# type: Plain text
+#. type: Plain text
+#: sensible-editor.man
+msgid "B<sensible-pager> [OPTIONS...]"
+msgstr "B<sensible-pager> [OPTIONS...]"
+
+# type: Plain text
+#. type: Plain text
+#: sensible-editor.man
+msgid "B<sensible-browser> url"
+msgstr "B<sensible-browser> url"
+
+# type: SH
+#. type: SH
+#: sensible-editor.man
+#, no-wrap
+msgid "DESCRIPTION"
+msgstr "DESCRIPTION"
+
+# type: Plain text
+#. type: Plain text
+#: sensible-editor.man
+msgid ""
+"B<sensible-editor>, B<sensible-pager> and B<sensible-browser> make sensible "
+"decisions on which editor, pager, and web browser to call, respectively.  "
+"Programs in Debian can use these scripts as their default editor, pager, or "
+"web browser or emulate their behavior."
+msgstr ""
+"B<sensible-editor>, B<sensible-pager> et B<sensible-browser> prennent des "
+"décisions sensées respectivement sur le choix de l'éditeur, de l'outil de "
+"mise en page (« pageur ») et de l'outil de navigation qu'il faut appeler. "
+"Les programmes de la distribution Debian peuvent utiliser ces scripts comme "
+"éditeur, pageur, ou navigateur par défaut ou peuvent simuler leur "
+"comportement."
+
+# type: SH
+#. type: SH
+#: sensible-editor.man
+#, no-wrap
+msgid "SEE ALSO"
+msgstr "VOIR AUSSI"
+
+# NOTE : manque un verbe
+# type: Plain text
+#. type: Plain text
+#: sensible-editor.man
+#, fuzzy
+#| msgid ""
+#| "Documentation of the EDITOR, VISUAL, PAGER, and BROWSER variables in "
+#| "B<environ>(7)"
+msgid ""
+"Documentation of the EDITOR, VISUAL and PAGER variables in B<environ>(7)  "
+"and B<select-editor>(1)  for changing a user's default editor"
+msgstr ""
+"La documentation des variables d'environnement EDITOR, VISUAL, PAGER, et "
+"BROWSER se trouve dans B<environ>(7)."
+
+#. type: SH
+#: sensible-editor.man
+#, no-wrap
+msgid "STANDARD"
+msgstr "STANDARD"
+
+#. type: Plain text
+#: sensible-editor.man
+msgid ""
+"Documentation of behavior of sensible-utils under a debian system is "
+"available under section 11.4 of debian-policy usually installed under /usr/"
+"share/doc/debian-policy (you might need to install debian-policy)"
+msgstr ""
+"La documentation du comportement du pacquet sensible-utils pour un système "
+"debian est disponible au titre 11.4 du manuel de la politique debian qui est "
+"usuellement installé sous /usr/share/doc/debian-policy (il convient "
+"d'installer le pacquet debian-policy)"

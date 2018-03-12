@@ -5,7 +5,7 @@
 
 # if no gettext it will fallback to gettext on /usr/share/sensible-utils/bin
 # see #728612
-PATH=$PATH:/usr/sbin:/usr/local/share/sensible-utils/bin
+PATH=$PATH:/usr/sbin:@binpkgdatadir@
 
 # EASIEST editor
 EASIEST="/bin/nano"
