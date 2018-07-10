@@ -1,3 +1,9 @@
+sensible-utils (0.0.9+deb9u1pexip1) pexip; urgency=medium
+
+  * Migrate to Stretch
+
+ -- John-Mark Bell <jmb@pexip.com>  Tue, 10 Jul 2018 00:20:14 +0000
+
 sensible-utils (0.0.9+deb9u1) stretch-security; urgency=high
 
   * Non-maintainer upload by the Security Team.
