@@ -1,0 +1,6 @@
+Test-Command: sh test/echo-as-browser
+Depends: sensible-utils
+
+Test-Command: sh test/ed-as-sensible-editor
+Depends: sensible-utils, ed
+Restrictions: allow-stderr

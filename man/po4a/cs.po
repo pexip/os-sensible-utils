@@ -1,0 +1,121 @@
+# Czech translation for package sensible-utils.
+# Copyright (C) 2012 Michal Simunek <michal.simunek@gmail.com>
+# This file is distributed under the same license as the sensible-utils package.
+# Michal Simunek <michal.simunek@gmail.com>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sensible-utils\n"
+"POT-Creation-Date: 2017-08-11 09:11+0200\n"
+"PO-Revision-Date: 2012-05-16 14:31+0200\n"
+"Last-Translator: Michal Simunek <michal.simunek@gmail.com>\n"
+"Language-Team: Czech <debian-l10n-czech@lists.debian.org>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: utf-8\n"
+
+#. type: TH
+#: sensible-editor.man
+#, no-wrap
+msgid "SENSIBLE-EDITOR"
+msgstr "SENSIBLE-EDITOR"
+
+#. type: TH
+#: sensible-editor.man
+#, no-wrap
+msgid "14 Nov 2010"
+msgstr "14. lis 2010"
+
+#. type: TH
+#: sensible-editor.man
+#, no-wrap
+msgid "Debian"
+msgstr "Debian"
+
+#. type: SH
+#: sensible-editor.man
+#, no-wrap
+msgid "NAME"
+msgstr "NÁZEV"
+
+#. type: Plain text
+#: sensible-editor.man
+msgid ""
+"sensible-editor, sensible-pager, sensible-browser - sensible editing, "
+"paging, and web browsing"
+msgstr ""
+"sensible-editor, sensible-pager, sensible-browser - rozumné upravování, "
+"prohlížení dokumentů a procházení webu"
+
+#. type: SH
+#: sensible-editor.man
+#, no-wrap
+msgid "SYNOPSIS"
+msgstr "PŘEHLED"
+
+#. type: Plain text
+#: sensible-editor.man
+msgid "B<sensible-editor> [OPTIONS...]"
+msgstr "B<sensible-editor> [VOLBY...]"
+
+#. type: Plain text
+#: sensible-editor.man
+msgid "B<sensible-pager> [OPTIONS...]"
+msgstr "B<sensible-pager> [VOLBY...]"
+
+#. type: Plain text
+#: sensible-editor.man
+msgid "B<sensible-browser> url"
+msgstr "B<sensible-browser> url"
+
+#. type: SH
+#: sensible-editor.man
+#, no-wrap
+msgid "DESCRIPTION"
+msgstr "POPIS"
+
+#. type: Plain text
+#: sensible-editor.man
+msgid ""
+"B<sensible-editor>, B<sensible-pager> and B<sensible-browser> make sensible "
+"decisions on which editor, pager, and web browser to call, respectively.  "
+"Programs in Debian can use these scripts as their default editor, pager, or "
+"web browser or emulate their behavior."
+msgstr ""
+"B<sensible-editor>, B<sensible-pager> a B<sensible-browser> činí rozumná "
+"rozhodnutí, který příslušný editor, prohlížeč dokumentů a webový prohlížeč "
+"volat. Programy v Debianu mohou tyto skripty využívat jako svůj výchozí "
+"editor, prohlížeč dokumentů a webový prohlížeč, či k napodobení jejich "
+"chování."
+
+#. type: SH
+#: sensible-editor.man
+#, no-wrap
+msgid "SEE ALSO"
+msgstr "VIZ TAKÉ"
+
+#. type: Plain text
+#: sensible-editor.man
+#, fuzzy
+#| msgid ""
+#| "Documentation of the EDITOR, VISUAL, PAGER, and BROWSER variables in "
+#| "B<environ>(7)"
+msgid ""
+"Documentation of the EDITOR, VISUAL and PAGER variables in B<environ>(7)  "
+"and B<select-editor>(1)  for changing a user's default editor"
+msgstr "Proměnné EDITOR, VISUAL, PAGER a BROWSER v dokumentaci B<environ>(7)"
+
+#. type: SH
+#: sensible-editor.man
+#, no-wrap
+msgid "STANDARD"
+msgstr ""
+
+#. type: Plain text
+#: sensible-editor.man
+msgid ""
+"Documentation of behavior of sensible-utils under a debian system is "
+"available under section 11.4 of debian-policy usually installed under /usr/"
+"share/doc/debian-policy (you might need to install debian-policy)"
+msgstr ""

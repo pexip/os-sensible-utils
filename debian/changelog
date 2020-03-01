@@ -1,16 +1,75 @@
+sensible-utils (0.0.12) unstable; urgency=medium
+
+  * Fix sensible-browser launches $BROWSER with empty argument
+    (Closes: #885688)
+  * Bug fix: "[INTL:de] updated German man page translation", thanks to
+    Helge Kreutzmann (Closes: #877553).
+  * Add basic testing.
+  * Bump compat and policy (no changes)
+
+ -- Bastien Roucariès <rouca@debian.org>  Mon, 12 Mar 2018 11:17:53 +0100
+
+sensible-utils (0.0.11) unstable; urgency=high
+
+  * Bug fix: "Argument injection in sensible-browser", thanks to Gabriel
+    Corona (Closes: #881767). Fixing this bug by not supporting %s
+    expansion in $BROWSER. Users needing this feature (like running
+    'firefox -remote "openURL(%s,new-window)"',  with %s the URL)
+    could use a shell wrapper. Remove also multiple browser support.
+  * Fixing #881767 means not using unsupportable %s in $BROWSER, thus
+    Closes: #289745.
+
+ -- Bastien Roucariès <rouca@debian.org>  Wed, 15 Nov 2017 16:30:02 +0100
+
+sensible-utils (0.0.10) unstable; urgency=medium
+
+  * Acknowledge NMU
+  * Add myself as uploader.
+  * Bump policy no change.
+  * Update copyright.
+  * Use debhelper.
+  * Harden recursive execution of script
+    (Closes: #775727, #390580).
+  * Bug fix: "[l10n:cs] Initial Czech translation of package
+    sensible-utils", thanks to Michal Simunek (Closes: #673157).
+  * Bug fix: "[INTL:pt] Portuguese translation of manpage", thanks to
+    Américo Monteiro (Closes: #758072).
+  * Bug fix: "Manpages not utf-8 encoded", thanks to Sandro Mani (Closes:
+    #739688).
+  * Bug fix: "requires gettext but no dependency on gettext-base", thanks
+    to Jonathan Dowland (Closes: #728612). Supply a echo -n gettext in
+    private dir.
+  * Bug fix: "Manpage should reference appropriate section of Debian
+    Policy", thanks to Jari Aalto (Closes: #603243).
+  * Bug fix: "Infinite loop in select-editor when nano is not installed
+    (batch-mode)", thanks to Niels Thykier (Closes: #777168).
+  * Bug fix: "please sort editors by priority in select-editor", thanks to
+    David Kalnischkies (Closes: #720853).
+
+ -- Bastien Roucariès <rouca@debian.org>  Fri, 11 Aug 2017 09:06:21 +0200
+
+sensible-utils (0.0.9+nmu1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+
+  [ Jérémy Bobbio ]
+  * Make package build reproducibly:
+    - Stop recording current time when creating gzip files.
+    - Fix mtimes before creating binary packages.
+
+  [ Ximin Luo ]
+  * Make package build reproducible, pt 2:
+    - Sort file list, to avoid filesystem differences.
+    - Explicitly install every language man dir, to avoid umask differences.
+    - Slightly refactoring for readability.
+
+ -- Ximin Luo <infinity0@debian.org>  Wed, 28 Jun 2017 18:17:02 +0200
+
 sensible-utils (0.0.9+deb9u1pexip1) pexip; urgency=medium
 
   * Migrate to Stretch
 
  -- John-Mark Bell <jmb@pexip.com>  Tue, 10 Jul 2018 00:20:14 +0000
-
-sensible-utils (0.0.9+deb9u1) stretch-security; urgency=high
-
-  * Non-maintainer upload by the Security Team.
-  * Argument injection in sensible-browser (CVE-2017-17512)
-    Thanks to Gabriel Corona (Closes: #881767)
-
- -- Salvatore Bonaccorso <carnil@debian.org>  Wed, 20 Dec 2017 14:39:04 +0100
 
 sensible-utils (0.0.9+deb8u1pexip1) pexip; urgency=low
 

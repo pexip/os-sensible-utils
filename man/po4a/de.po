@@ -1,0 +1,122 @@
+# Translation of sensible-utils man page template to German
+# Copyright (C) Helge Kreutzmann <debian@helgefjell.de>, 2011, 2017.
+# This file is distributed under the same license as the sensible-utils package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sensible-utils man page\n"
+"POT-Creation-Date: 2017-08-11 09:12+0200\n"
+"PO-Revision-Date: 2017-10-02 17:57+0200\n"
+"Last-Translator: Helge Kreutzmann <debian@helgefjell.de>\n"
+"Language-Team: German <debian-l10n-german@lists.debian.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: utf-8\n"
+
+#. type: TH
+#: sensible-editor.man
+#, no-wrap
+msgid "SENSIBLE-EDITOR"
+msgstr "SENSIBLE-EDITOR"
+
+#. type: TH
+#: sensible-editor.man
+#, no-wrap
+msgid "14 Nov 2010"
+msgstr "14. Nov. 2010"
+
+#. type: TH
+#: sensible-editor.man
+#, no-wrap
+msgid "Debian"
+msgstr "Debian"
+
+#. type: SH
+#: sensible-editor.man
+#, no-wrap
+msgid "NAME"
+msgstr "NAME"
+
+#. type: Plain text
+#: sensible-editor.man
+msgid ""
+"sensible-editor, sensible-pager, sensible-browser - sensible editing, "
+"paging, and web browsing"
+msgstr ""
+"sensible-editor, sensible-pager, sensible-browser - vernünftiges Bearbeiten, "
+"Blättern und Web-Surfen"
+
+#. type: SH
+#: sensible-editor.man
+#, no-wrap
+msgid "SYNOPSIS"
+msgstr "ÜBERSICHT"
+
+#. type: Plain text
+#: sensible-editor.man
+msgid "B<sensible-editor> [OPTIONS...]"
+msgstr "B<sensible-editor> [OPTIONEN …]"
+
+#. type: Plain text
+#: sensible-editor.man
+msgid "B<sensible-pager> [OPTIONS...]"
+msgstr "B<sensible-pager> [OPTIONEN …]"
+
+#. type: Plain text
+#: sensible-editor.man
+msgid "B<sensible-browser> url"
+msgstr "B<sensible-browser> URL"
+
+#. type: SH
+#: sensible-editor.man
+#, no-wrap
+msgid "DESCRIPTION"
+msgstr "BESCHREIBUNG"
+
+#. type: Plain text
+#: sensible-editor.man
+msgid ""
+"B<sensible-editor>, B<sensible-pager> and B<sensible-browser> make sensible "
+"decisions on which editor, pager, and web browser to call, respectively.  "
+"Programs in Debian can use these scripts as their default editor, pager, or "
+"web browser or emulate their behavior."
+msgstr ""
+"B<sensible-editor>, B<sensible-pager> und B<sensible-browser> treffen "
+"vernünftige Entscheidungen, welcher Editor, Anzeigeprogramm (»pager«) und "
+"Web-Browser jeweils aufgerufen wird. Programme in Debian können diese "
+"Skripte als ihr Standard-Editor, Standard-Anzeigeprogramm oder Standard-Web-"
+"Browser benutzen oder um deren Verhalten zu emulieren."
+
+#. type: SH
+#: sensible-editor.man
+#, no-wrap
+msgid "SEE ALSO"
+msgstr "SIEHE AUCH"
+
+#. type: Plain text
+#: sensible-editor.man
+msgid ""
+"Documentation of the EDITOR, VISUAL and PAGER variables in B<environ>(7)  "
+"and B<select-editor>(1)  for changing a user's default editor"
+msgstr ""
+"Dokumentation der Variablen EDITOR, VISUAL und PAGER in B<environ>(7) zur "
+"Änderung des Standard-Editors des Benutzers"
+
+#. type: SH
+#: sensible-editor.man
+#, no-wrap
+msgid "STANDARD"
+msgstr "STANDARD"
+
+#. type: Plain text
+#: sensible-editor.man
+msgid ""
+"Documentation of behavior of sensible-utils under a debian system is "
+"available under section 11.4 of debian-policy usually installed under /usr/"
+"share/doc/debian-policy (you might need to install debian-policy)"
+msgstr ""
+"Die Beschreibung des Verhaltens der Sensible-Utils in einem Debian-System ist "
+"unter Abschnitt 11.4 der Debian-Policy erhältlich, die normalerweise unter /"
+"usr/share/doc/debian-policy installiert wird (Sie müssen ggf. debian-policy "
+"installieren)."
