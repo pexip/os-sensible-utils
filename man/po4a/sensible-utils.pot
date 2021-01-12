@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sensible-utils VERSION\n"
-"POT-Creation-Date: 2018-03-12 12:18+0100\n"
+"POT-Creation-Date: 2021-01-12 22:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. type: TH
-#: sensible-editor.man
+#: sensible-editor.man sensible-browser.man
 #, no-wrap
 msgid "SENSIBLE-EDITOR"
 msgstr ""
@@ -25,30 +25,31 @@ msgstr ""
 #. type: TH
 #: sensible-editor.man
 #, no-wrap
-msgid "14 Nov 2010"
+msgid "14 Nov 2018"
 msgstr ""
 
 #. type: TH
-#: sensible-editor.man
+#: sensible-editor.man sensible-browser.man sensible-pager.man
+#: select-editor.man
 #, no-wrap
 msgid "Debian"
 msgstr ""
 
 #. type: SH
-#: sensible-editor.man
+#: sensible-editor.man sensible-browser.man sensible-pager.man
+#: select-editor.man
 #, no-wrap
 msgid "NAME"
 msgstr ""
 
 #. type: Plain text
 #: sensible-editor.man
-msgid ""
-"sensible-editor, sensible-pager, sensible-browser - sensible editing, "
-"paging, and web browsing"
+msgid "sensible-editor - sensible editing"
 msgstr ""
 
 #. type: SH
-#: sensible-editor.man
+#: sensible-editor.man sensible-browser.man sensible-pager.man
+#: select-editor.man
 #, no-wrap
 msgid "SYNOPSIS"
 msgstr ""
@@ -58,18 +59,9 @@ msgstr ""
 msgid "B<sensible-editor> [OPTIONS...]"
 msgstr ""
 
-#. type: Plain text
-#: sensible-editor.man
-msgid "B<sensible-pager> [OPTIONS...]"
-msgstr ""
-
-#. type: Plain text
-#: sensible-editor.man
-msgid "B<sensible-browser> url"
-msgstr ""
-
 #. type: SH
-#: sensible-editor.man
+#: sensible-editor.man sensible-browser.man sensible-pager.man
+#: select-editor.man
 #, no-wrap
 msgid "DESCRIPTION"
 msgstr ""
@@ -77,35 +69,204 @@ msgstr ""
 #. type: Plain text
 #: sensible-editor.man
 msgid ""
-"B<sensible-editor>, B<sensible-pager> and B<sensible-browser> make sensible "
-"decisions on which editor, pager, and web browser to call, respectively.  "
-"Programs in Debian can use these scripts as their default editor, pager, or "
-"web browser or emulate their behavior."
+"B<sensible-editor> make sensible decisions on which editor to call.  "
+"Programs in Debian can use these scripts as their default editor."
+msgstr ""
+
+#. type: Plain text
+#: sensible-editor.man
+msgid "B<sensible-editor> try to do in the following order:"
+msgstr ""
+
+#. type: IP
+#: sensible-editor.man
+#, no-wrap
+msgid "\\n[step]"
+msgstr ""
+
+#. type: Plain text
+#: sensible-editor.man
+msgid "if B<VISUAL> environment variable exists, execute B<VISUAL [OPTIONS]>"
+msgstr ""
+
+#. type: IP
+#: sensible-editor.man
+#, no-wrap
+msgid "\\n+[step]"
+msgstr ""
+
+#. type: Plain text
+#: sensible-editor.man
+msgid "if B<EDITOR> environment variable exists, execute B<EDITOR\\ [OPTIONS]>"
+msgstr ""
+
+#. type: Plain text
+#: sensible-editor.man
+msgid ""
+"source the contents of file I<~/.selected_editor> and, if B<SELECTED_EDITOR> "
+"environment variable exists execute B<SELECTED_EDITOR\\ [OPTIONS]>"
+msgstr ""
+
+#. type: Plain text
+#: sensible-editor.man
+msgid "run B<editor [OPTIONS]> command"
+msgstr ""
+
+#. type: Plain text
+#: sensible-editor.man
+msgid "finally run B<nano-tiny [OPTIONS]> command"
 msgstr ""
 
 #. type: SH
-#: sensible-editor.man
+#: sensible-editor.man sensible-pager.man select-editor.man
 #, no-wrap
 msgid "SEE ALSO"
 msgstr ""
 
 #. type: Plain text
 #: sensible-editor.man
-msgid ""
-"Documentation of the EDITOR, VISUAL and PAGER variables in B<environ>(7)  "
-"and B<select-editor>(1)  for changing a user's default editor"
+msgid "B<environ>(7)  for documentation of the EDITOR, VISUAL variables"
+msgstr ""
+
+#. type: Plain text
+#: sensible-editor.man
+msgid "B<select-editor>(1)  for changing a user's default editor."
+msgstr ""
+
+#. type: Plain text
+#: sensible-editor.man
+msgid "B<editor>(1)  for default system wide editor."
 msgstr ""
 
 #. type: SH
 #: sensible-editor.man
 #, no-wrap
-msgid "STANDARD"
+msgid "BUGS"
 msgstr ""
 
 #. type: Plain text
 #: sensible-editor.man
 msgid ""
+"This command is protected against trivial fork bomb, when user set "
+"B<EDITOR=sensible-editor> wider loops are still possible."
+msgstr ""
+
+#. type: SH
+#: sensible-editor.man sensible-browser.man sensible-pager.man
+#, no-wrap
+msgid "STANDARD"
+msgstr ""
+
+#. type: Plain text
+#: sensible-editor.man sensible-browser.man sensible-pager.man
+msgid ""
 "Documentation of behavior of sensible-utils under a debian system is "
 "available under section 11.4 of debian-policy usually installed under "
 "/usr/share/doc/debian-policy (you might need to install debian-policy)"
+msgstr ""
+
+#. type: TH
+#: sensible-browser.man sensible-pager.man
+#, no-wrap
+msgid "12 Jan 2020"
+msgstr ""
+
+#. type: Plain text
+#: sensible-browser.man
+msgid "sensible-browser - sensible web browsing"
+msgstr ""
+
+#. type: Plain text
+#: sensible-browser.man
+msgid "B<sensible-browser> url"
+msgstr ""
+
+#. type: Plain text
+#: sensible-browser.man
+msgid ""
+"B<sensible-browser> make sensible decisions on which web browser to call.  "
+"Programs in Debian can use this script as their default web browser or "
+"emulate their behavior."
+msgstr ""
+
+#. type: TH
+#: sensible-pager.man
+#, no-wrap
+msgid "SENSIBLE-PAGER"
+msgstr ""
+
+#. type: Plain text
+#: sensible-pager.man
+msgid "sensible-pager, sensible paging"
+msgstr ""
+
+#. type: Plain text
+#: sensible-pager.man
+msgid "B<sensible-pager> [OPTIONS...]"
+msgstr ""
+
+#. type: Plain text
+#: sensible-pager.man
+msgid ""
+"B<sensible-pager> make sensible decisions on which pager to call.  Programs "
+"in Debian can use this script as their default pager, or emulate their "
+"behavior."
+msgstr ""
+
+#. type: Plain text
+#: sensible-pager.man
+msgid "Documentation of the PAGER variable in B<environ>(7)"
+msgstr ""
+
+#. type: TH
+#: select-editor.man
+#, no-wrap
+msgid "SELECT-EDITOR"
+msgstr ""
+
+#. type: TH
+#: select-editor.man
+#, no-wrap
+msgid "21 May 2008"
+msgstr ""
+
+#. type: Plain text
+#: select-editor.man
+msgid ""
+"select-editor - select your default sensible-editor from all installed "
+"editors"
+msgstr ""
+
+#. type: Plain text
+#: select-editor.man
+msgid "B<select-editor>"
+msgstr ""
+
+#. type: Plain text
+#: select-editor.man
+msgid ""
+"B<select-editor> provides a coherent mechanism for selecting and storing a "
+"preferred sensible-editor on a per-user basis.  It lists the available "
+"editors on a system and interactively prompts the user to select one.  The "
+"results are stored as SELECTED_EDITOR in ~/.selected_editor, which is "
+"sourced and used by sensible-editor.  SELECTED_EDITOR is overridden by the "
+"VISUAL and EDITOR environment variables."
+msgstr ""
+
+#. type: SH
+#: select-editor.man
+#, no-wrap
+msgid "AUTHOR"
+msgstr ""
+
+#. type: Plain text
+#: select-editor.man
+msgid ""
+"B<select-editor> was written by Dustin Kirkland "
+"E<lt>kirkland@canonical.comE<gt>."
+msgstr ""
+
+#. type: Plain text
+#: select-editor.man
+msgid "B<sensible-editor>(1)"
 msgstr ""

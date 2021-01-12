@@ -5,29 +5,12 @@ export VERBOSE=1
 include /usr/share/dpkg/pkg-info.mk
 include /usr/share/dpkg/architecture.mk
 
-package = sensible-utils
-
-CFLAGS = -Wall -g
-
 ifneq ($(DEB_BUILD_GNU_TYPE),$(DEB_HOST_GNU_TYPE))
 CONFARGS = --host=$(DEB_HOST_GNU_TYPE)
 endif
 
-ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
-CFLAGS += -O0
-else
-CFLAGS += -O2
-endif
-#ifeq (,$(findstring nostrip,$(DEB_BUILD_OPTIONS)))
-#INSTALL_PROGRAM += -s
-#endif
-
 %:
 	dh $@
-
-override_dh_autoconfigure-indep:
-	CFLAGS="$(CFLAGS)" ./configure --prefix=/usr \
-		                       --mandir=/usr/share/man $(CONFARGS)
 
 override_dh_auto_test:
 ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS) $(DEB_BUILD_PROFILES)))
@@ -38,8 +21,6 @@ else
 	@echo '**********************************************************'
 endif
 
-
-
 prebuild:
 	echo "$(DEB_VERSION_UPSTREAM)"
 	printf "define(SENSIBLE_UTILS_VERSION, %s)\n" $(DEB_VERSION_UPSTREAM) >acinclude.m4
@@ -48,7 +29,6 @@ prebuild:
 	$(RM) -rf autom4te.cache
 
 	cd man && make update-po
-
 
 .PHONY: prebuild
 

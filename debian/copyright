@@ -1,7 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: sensible-utils
-Upstream-Contact: Anibal Monsalve Salazar <anibal@debian.org>
-Source: https://alioth.debian.org/projects/collab-maint/sensible-utils.git
+Source: https://salsa.debian.org/debian/sensible-utils
 
 Files: *
 Copyright: 2002-2009, Clint Adams <schizo@debian.org>
