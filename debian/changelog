@@ -1,3 +1,50 @@
+sensible-utils (0.0.14) unstable; urgency=medium
+
+  [Boyuan Yang <byang@debian.org>]
+  * debian/copyright: Drop words about alioth, set upstream project
+    to be the same as Salsa packaging repository.
+
+  [Bastien Roucaries <rouca@debian.org]
+  * Bug fix: "select-editor should quote path used in the script", thanks
+    to Nicolas Évrard (Closes: #913559).
+  * Bug fix: "FTBFS: po4a::po: Invalid value for option porefs,
+    thanks to Lucas Nussbaum (Closes: #975851).
+  * Improve man pages (Closes: #969587,#397051)
+  * Fix recursion protection. Thanks to Matthew Gabeler-Lee
+    (Closes: #953134)
+  * Update on Portuguese translation of manpage.
+    (Closes: #962578,#923807)
+
+ -- Bastien Roucariès <rouca@debian.org>  Tue, 12 Jan 2021 22:01:50 +0000
+
+sensible-utils (0.0.13) experimental; urgency=medium
+
+  * Fix FTBFS po4a::po: Invalid value for option 'porefs'
+    Change value for option 'porefs' from 'noline,wrap' to 'noline'
+    Closes: #963424
+  * d/rules: remove override_dh_autoconfigure
+    Closes: #944897 
+  * d/control:
+    Update standards version to 4.5.0.2
+    Add build-depends: debhelper (>= 11)
+    Drop build-depends-indep: dpkg
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Tue, 07 Jul 2020 18:00:29 -0500
+
+sensible-utils (0.0.12+nmu1) unstable; urgency=medium
+
+  [ Felipe Sateler ]
+  * Non-maintainer upload.
+  * Do not attempt to discover the executable path of empty variables.
+    Otherwise, which outputs a message like `usage: which [-as] program ... `.
+    Instead of invoking which without arguments, lets skip the check
+    (Closes: #927022)
+
+  [ Boyuan Yang ]
+  * debian/control: Update Vcs-* fields and use git packaging repo under Salsa Debian group.
+
+ -- Felipe Sateler <fsateler@debian.org>  Sun, 17 Nov 2019 09:21:22 -0300
+
 sensible-utils (0.0.12pexip2) pexip; urgency=medium
 
   * Rebuild in buster environment

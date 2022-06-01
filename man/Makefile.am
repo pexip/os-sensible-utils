@@ -19,7 +19,7 @@ PO4A_V_ = $(PO4A_V_@AM_DEFAULT_V@)
 PO4A_V_0 = @echo "  PO4A   $@";
 
 PO4A_OPTS = --previous --srcdir $(srcdir) --destdir $(builddir) --no-backups \
-            --porefs noline,wrap --msgmerge-opt=--add-location=file \
+            --porefs noline --msgmerge-opt=--add-location=file \
             --package-name $(PACKAGE_NAME) #--package-version $(PACKAGE_VERSION) #\
             #--copyright-holder "$(PACKAGE_COPYRIGHT_HOLDER)"# \
 	    #--msgid-bugs-address $(PACKAGE_BUGREPORT)
