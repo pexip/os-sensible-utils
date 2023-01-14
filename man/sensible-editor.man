@@ -6,8 +6,8 @@ sensible-editor \- sensible editing
 .BR sensible-editor " [OPTIONS...]"
 .br
 .SH DESCRIPTION
-.BR sensible-editor " make sensible decisions on which editor to call.
-Programs in Debian can use these scripts
+.BR sensible-editor " makes sensible decisions on which editor to call.
+Programs in Debian can use this script
 as their default editor.
 .nr step 1 1
 .B sensible-editor

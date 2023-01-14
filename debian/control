@@ -2,9 +2,8 @@ Source: sensible-utils
 Section: utils
 Priority: required
 Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
-Build-Depends: 
- debhelper (>= 11),
-Build-Depends-Indep: 
+Build-Depends: debhelper-compat (= 12)
+Build-Depends-Indep:
  po4a,
  ed <!nocheck>
 Uploaders: Bastien Roucariès <rouca@debian.org>

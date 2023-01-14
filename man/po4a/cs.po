@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sensible-utils\n"
-"POT-Creation-Date: 2021-01-12 22:34+0000\n"
+"POT-Creation-Date: 2021-08-07 15:21+0000\n"
 "PO-Revision-Date: 2012-05-16 14:31+0200\n"
 "Last-Translator: Michal Simunek <michal.simunek@gmail.com>\n"
 "Language-Team: Czech <debian-l10n-czech@lists.debian.org>\n"
@@ -75,8 +75,8 @@ msgstr "POPIS"
 #| "respectively.  Programs in Debian can use these scripts as their default "
 #| "editor, pager, or web browser or emulate their behavior."
 msgid ""
-"B<sensible-editor> make sensible decisions on which editor to call.  "
-"Programs in Debian can use these scripts as their default editor."
+"B<sensible-editor> makes sensible decisions on which editor to call.  "
+"Programs in Debian can use this script as their default editor."
 msgstr ""
 "B<sensible-editor>, B<sensible-pager> a B<sensible-browser> činí rozumná "
 "rozhodnutí, který příslušný editor, prohlížeč dokumentů a webový prohlížeč "
@@ -201,7 +201,7 @@ msgstr "B<sensible-browser> url"
 #| "respectively.  Programs in Debian can use these scripts as their default "
 #| "editor, pager, or web browser or emulate their behavior."
 msgid ""
-"B<sensible-browser> make sensible decisions on which web browser to call.  "
+"B<sensible-browser> makes sensible decisions on which web browser to call.  "
 "Programs in Debian can use this script as their default web browser or "
 "emulate their behavior."
 msgstr ""
@@ -210,6 +210,11 @@ msgstr ""
 "volat. Programy v Debianu mohou tyto skripty využívat jako svůj výchozí "
 "editor, prohlížeč dokumentů a webový prohlížeč, či k napodobení jejich "
 "chování."
+
+#. type: Plain text
+#: sensible-browser.man
+msgid "BROWSER environment variable could be set, and will be used if set."
+msgstr ""
 
 #. type: TH
 #: sensible-pager.man
@@ -220,7 +225,7 @@ msgstr "SENSIBLE-EDITOR"
 
 #. type: Plain text
 #: sensible-pager.man
-msgid "sensible-pager, sensible paging"
+msgid "sensible-pager - sensible paging"
 msgstr ""
 
 #. type: Plain text
@@ -237,7 +242,7 @@ msgstr "B<sensible-pager> [VOLBY...]"
 #| "respectively.  Programs in Debian can use these scripts as their default "
 #| "editor, pager, or web browser or emulate their behavior."
 msgid ""
-"B<sensible-pager> make sensible decisions on which pager to call.  Programs "
+"B<sensible-pager> makes sensible decisions on which pager to call.  Programs "
 "in Debian can use this script as their default pager, or emulate their "
 "behavior."
 msgstr ""
@@ -283,9 +288,9 @@ msgid ""
 "B<select-editor> provides a coherent mechanism for selecting and storing a "
 "preferred sensible-editor on a per-user basis.  It lists the available "
 "editors on a system and interactively prompts the user to select one.  The "
-"results are stored as SELECTED_EDITOR in ~/.selected_editor, which is "
-"sourced and used by sensible-editor.  SELECTED_EDITOR is overridden by the "
-"VISUAL and EDITOR environment variables."
+"results are stored as SELECTED_EDITOR variable in ~/.selected_editor, which "
+"is sourced and used by B<sensible-editor> command.  SELECTED_EDITOR variable "
+"is overridden by the VISUAL and EDITOR environment variables."
 msgstr ""
 
 #. type: SH

@@ -1,13 +1,13 @@
 .\" -*- nroff -*-
 .TH SENSIBLE-PAGER 1 "12 Jan 2020" "Debian"
 .SH NAME
-sensible-pager, sensible paging
+sensible-pager \- sensible paging
 .SH SYNOPSIS
 .BR sensible-pager " [OPTIONS...]"
 .br
 .SH DESCRIPTION
 .BR sensible-pager
-make sensible decisions on which pager to call.
+makes sensible decisions on which pager to call.
 Programs in Debian can use this script
 as their default pager, or emulate their behavior.
 .SH "SEE ALSO"
