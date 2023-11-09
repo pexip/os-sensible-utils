@@ -12,7 +12,7 @@ Uploaders: Bastien Roucariès <rouca@debian.org>
 Standards-Version: 4.5.0.2
 Vcs-Git: https://salsa.debian.org/debian/sensible-utils.git
 Vcs-Browser: https://salsa.debian.org/debian/sensible-utils
-XS-Pexip-Upstream: http://deb.debian.org/debian/ bullseye
+XS-Pexip-Upstream: http://deb.debian.org/debian/ bookworm
 
 Package: sensible-utils
 Architecture: all
