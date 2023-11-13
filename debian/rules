@@ -26,6 +26,7 @@ prebuild:
 	printf "define(SENSIBLE_UTILS_VERSION, %s)\n" $(DEB_VERSION_UPSTREAM) >acinclude.m4
 
 	autoreconf -fi
+	./configure
 	$(RM) -rf autom4te.cache
 
 	cd man && make update-po

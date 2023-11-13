@@ -1,3 +1,50 @@
+sensible-utils (0.0.17+nmu1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Update manpage translation
+    - German translation.
+      Thanks Helge Kreutzmann (Closes: #993393)
+    - Portuguese translation.
+      Thanks Américo Monteiro (Closes: #1019557)
+
+ -- Helge Kreutzmann <debian@helgefjell.de>  Sat, 14 Jan 2023 17:28:42 +0100
+
+sensible-utils (0.0.17) unstable; urgency=medium
+
+  * Bug fix: "Maximum function recursion depth (1000) reached", thanks
+    to Martin-Éric Racine (Closes: #993130). Use command nano
+    instead of nano alias for working arround nano bug.
+
+ -- Bastien Roucariès <rouca@debian.org>  Sun, 29 Aug 2021 17:44:44 +0000
+
+sensible-utils (0.0.16) unstable; urgency=high
+
+  * Upload to unstable, high priority due to which error message.
+
+ -- Bastien Roucariès <rouca@debian.org>  Thu, 26 Aug 2021 15:47:11 +0000
+
+sensible-utils (0.0.15) experimental; urgency=medium
+
+  * Trim trailing whitespace.
+  * debian/copyright: use spaces rather than tabs to start continuation lines.
+  * Bump debhelper from old 11 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Document BROWSER variable
+  * Do not write to / if $HOME is not set (Closes: #987675).
+  * Workarround nano bug that fail if TERM is not set.
+  * Merge Bug fix: "Improved implementation of
+    sensible-{browser,editor,pager}",thanks to Jari Aalto
+    (Closes: #445444).
+  * Fix manpages (Closes: #980185)
+  * Merge translation:
+    + de (Closes: #980183)
+    + pt (Closes: #980197)
+  * Bug fix: "replace "which" by "command -v" in
+    sensible-browser, sensible-editor and sensible-pager", thanks to
+    Harald Dunkel (Closes: #972999).
+
+ -- Bastien Roucariès <rouca@debian.org>  Tue, 24 Aug 2021 21:26:38 +0000
+
 sensible-utils (0.0.14pexip3) pexip-bullseye; urgency=medium
 
   * Bullseye rebuild for ARM64 inclusion
@@ -41,7 +88,7 @@ sensible-utils (0.0.13) experimental; urgency=medium
     Change value for option 'porefs' from 'noline,wrap' to 'noline'
     Closes: #963424
   * d/rules: remove override_dh_autoconfigure
-    Closes: #944897 
+    Closes: #944897
   * d/control:
     Update standards version to 4.5.0.2
     Add build-depends: debhelper (>= 11)
@@ -170,7 +217,7 @@ sensible-utils (0.0.9) unstable; urgency=low
 
 sensible-utils (0.0.8) unstable; urgency=low
 
-  * Merge 0.0.7ubuntu1 
+  * Merge 0.0.7ubuntu1
     - add select-editor (Closes: #482774)
     - modify sensible-editor to pick the editor from select-editor
   * Removes reference to non-existent BROWSER documentation in environ(7)
@@ -228,7 +275,7 @@ sensible-utils (0.0.6ubuntu1) natty; urgency=low
 
 sensible-utils (0.0.6) unstable; urgency=low
 
-  * New maintainer 
+  * New maintainer
   * French man page update from David Prévot
     Closes: 603883
   * Fix copyright-refers-to-symlink-license
@@ -305,10 +352,10 @@ sensible-utils (0.0.1ubuntu1) lucid; urgency=low
     - Makefile.am: Add select-editor to bin scripts and man page lists.
     - Makefile.in: Add select-editor to bin scripts and man page lists.
     - debian/control: Add select-editor to package description.
-    - select-editor: Interactive utility to prompt for and save editor on a 
+    - select-editor: Interactive utility to prompt for and save editor on a
       per user basis in ~/.selected_editor.
     - select-editor.1: Manpage for select-editor.
-    - sensible-editor: Source ~/.selected_editor and use SELECTED_EDITOR if 
+    - sensible-editor: Source ~/.selected_editor and use SELECTED_EDITOR if
       found, otherwise calling select-editor.
     - sensible-editor.1: Updated to cross-reference select-editor(1).
   * Dropped modifications to pot file.  Translation support doesn't work

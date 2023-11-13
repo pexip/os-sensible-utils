@@ -3,9 +3,8 @@ Section: utils
 Priority: required
 Maintainer: Pexip AS <packaging@pexip.com>
 XSBC-Pexip-Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
-Build-Depends: 
- debhelper (>= 11),
-Build-Depends-Indep: 
+Build-Depends: debhelper-compat (= 12)
+Build-Depends-Indep:
  po4a,
  ed <!nocheck>
 Uploaders: Bastien Roucariès <rouca@debian.org>
