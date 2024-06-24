@@ -1,3 +1,98 @@
+sensible-utils (0.0.24) unstable; urgency=medium
+
+  * Bug fix: "sensible-pager does not work with PAGER=sensible-pager",
+    thanks to Oswald Buddenhagen (Closes: #1074066).
+    Continue to next choice in case of recursion.
+
+ -- Bastien Roucariès <rouca@debian.org>  Mon, 24 Jun 2024 19:12:44 +0000
+
+sensible-utils (0.0.23) unstable; urgency=medium
+
+  * Bug fix: "error realpath: No such file or
+    directory; / possible recursive loop", thanks to Vincent Lefevre
+    (Closes: #1063405).
+  * Bug fix: "Errors in man page" thanks to Helge Kreutzmann (Closes: #1063482).
+  * Bug fix: "[INTL:de] updated German man page translation" thanks to Helge
+    kreutzmann (Closes: #1063481).
+  * Update all translations and unfuzzy where possible.
+  * Update de.add to match reality.
+  * Use alias instead of local gettext thanks to наб.
+  * eval instead of sh -c thanks to наб.
+
+ -- Bastien Roucariès <rouca@debian.org>  Sun, 16 Jun 2024 21:44:53 +0000
+
+sensible-utils (0.0.22) unstable; urgency=medium
+
+  * Upload to unstable
+  * Bug fix: "[INTL:de] updated German man page translation", thanks to
+    Helge Kreutzmann (Closes: #1038999, #1041549).
+  * Remove spurious ; (Closes: #1041676)
+  * Bug fix: "Remove -emulator from the sensible-terminal man
+    page", thanks to Dan Jacobson (Closes: #1056558).
+  * Bug fix: "Issues in man pages", thanks to Helge Kreutzmann (Closes:
+    #1041550).
+  * Bug fix: "some remarks and editorial fixes for the manual", thanks to
+    Bjarni Ingi Gislason (Closes: #1041587).
+  * Bug fix: "some remarks and editorial fixes for the manual", thanks to
+    Bjarni Ingi Gislason (Closes: #1041589).
+  * Bug fix: "some remarks and editorial fixes for the manual", thanks to
+    Bjarni Ingi Gislason (Closes: #1041669).
+  * Bug fix: "some remarks and editorial fixes for the manual", thanks to
+    Bjarni Ingi Gislason (Closes: #1041670).
+  * Bug fix: "some remarks and editorial fixes for the manual", thanks to
+    Bjarni Ingi Gislason (Closes: #1041737).
+  * Bug fix: "sensible-browser(1) man page has incorrect title
+    SENSIBLE-EDITOR(1)", thanks to Vincent Lefevre (Closes: #1061294).
+
+ -- Bastien Roucariès <rouca@debian.org>  Sun, 04 Feb 2024 18:05:15 +0000
+
+sensible-utils (0.0.21) experimental; urgency=medium
+
+  * Fix loop detection when /bin/sh is /bin/bash
+  * Bug fix: "Issues in man pages", thanks to Helge Kreutzmann (Closes:
+    #1038998).
+  * Fix bash loop detection by using realpath
+
+ -- Bastien Roucariès <rouca@debian.org>  Tue, 04 Jul 2023 23:16:15 +0000
+
+sensible-utils (0.0.20) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Bastien Roucariès <rouca@debian.org>  Sat, 17 Jun 2023 20:18:08 +0000
+
+sensible-utils (0.0.19) experimental; urgency=medium
+
+  * Bug fix: "Broken shell invocation handling", thanks to Guillem Jover
+    (Closes: #1034120).
+
+ -- Bastien Roucariès <rouca@debian.org>  Mon, 08 May 2023 07:56:01 +0000
+
+sensible-utils (0.0.18) experimental; urgency=medium
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster:
+    + sensible-utils: Drop versioned constraint on debianutils and manpages-pl
+      in Replaces.
+
+  [ Bastien Roucariès ]
+  * Aknowledge NMU
+  * Bug fix: "[INTL:de] updated German man page translation", thanks to
+    Helge Kreutzmann (Closes: #993393).
+  * Rules-Requires-Root: no
+  * Bump standards version (no changes)
+  * EDITOR, VISUAL, PAGER, BROWSER follow environ(7).
+    Any string acceptable as a command_string operand
+    to the sh -c command shall be valid.
+    (Closes: #960734).
+  * Bug fix: "Please provide a sensible-term (like x-terminal-emulator
+    alternative but user-configurable)", thanks to Josh Triplett (Closes:
+    #594942).
+  * Bug fix: "sensible-editor treats spaces differently in VISUAL and
+    EDITOR", thanks to Julian Gilbey (Closes: #1005034).
+
+ -- Bastien Roucariès <rouca@debian.org>  Sat, 18 Mar 2023 22:33:38 +0000
+
 sensible-utils (0.0.17+nmu1) unstable; urgency=medium
 
   * Non-maintainer upload.

@@ -1,6 +1,30 @@
-Test-Command: sh test/echo-as-browser
-Depends: sensible-utils
+Test-Command: test/echo-as-browser
 
-Test-Command: sh test/ed-as-sensible-editor
-Depends: sensible-utils, ed
+Test-Command: test/echo-as-pager
+
+Test-Command: test/echo-as-terminal
+
+Test-Command: test/ed-as-fallback
+Depends: @, ed
 Restrictions: allow-stderr
+
+Test-Command: test/ed-as-sensible-editor
+Depends: @, ed
+
+Test-Command: test/ed-as-visual
+Depends: @, ed
+
+Test-Command: test/empty
+
+Test-Command: test/error-out
+
+Test-Command: test/failure-propagation
+
+Test-Command: test/fork-bomb
+
+Test-Command: test/shell-script
+
+Test-Command: test/shellcheck
+Depends: @, shellcheck
+
+Test-Command: test/whitespace-preserved

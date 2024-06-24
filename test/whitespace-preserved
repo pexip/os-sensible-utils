@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+
+# test if multiple arguments with spaces inside will not get mangled
+data="$(TERMINAL_EMULATOR='printf Q%sQ\\n' sensible-terminal 'a b' c 'd	e')"
+[ "$data" = 'Qa bQ
+QcQ
+Qd	eQ' ]

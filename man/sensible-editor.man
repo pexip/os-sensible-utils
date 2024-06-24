@@ -1,56 +1,80 @@
 .\" -*- nroff -*-
-.TH SENSIBLE-EDITOR 1 "14 Nov 2018" "Debian"
+.TH SENSIBLE-EDITOR 1 "28 Aug 2022" "Debian"
 .SH NAME
-sensible-editor \- sensible editing
+sensible-editor \- launch sensibly chosen text editor
 .SH SYNOPSIS
-.BR sensible-editor " [OPTIONS...]"
-.br
+.B sensible-editor
+.RI [OPTIONS...]
 .SH DESCRIPTION
 .BR sensible-editor " makes sensible decisions on which editor to call.
-Programs in Debian can use this script
-as their default editor.
-.nr step 1 1
+Programs in Debian can invoke this script to get a good default editor.
+.PP
 .B sensible-editor
-try to do in the following order:
-.IP \n[step]
-if
-.B VISUAL
-environment variable exists, execute
-.B VISUAL [OPTIONS]
-.IP \n+[step]
-if
-.B EDITOR
-environment variable exists, execute
-.B EDITOR [OPTIONS]
-.IP \n+[step]
-source the contents of file
-.I ~/.selected_editor
-and, if
-.B SELECTED_EDITOR
-environment variable exists execute
-.B SELECTED_EDITOR [OPTIONS]
-.IP \n+[step]
-run
-.B editor [OPTIONS]
-command
-.IP \n+[step]
-finally run
-.B nano-tiny [OPTIONS]
-command
-.SH "SEE ALSO"
+looks for an appropriate choice of editor in a series
+of places, and uses the first candidate that works.
+It starts by checking environment variables,
+followed by a variable defined via
+.B select-editor,
+then tries the default editor command defined by the alternatives system,
+with a series of hard-coded command names as fallbacks.
+.PP
+Variables will be skipped if unset or null, but may include extra
+whitespace-separated parameters such as a
+.B \-\-verbose
+flag.
+Once
+.BR sensible-editor
+has a candidate commandline, it will try to run
+it (passing on the arguments it was given as the files to be edited).
+If this fails because the command couldn't be executed (exit code 126)
+or was not found (exit code 127), it tries the next candidate.
+.PP
+The specific candidates
+.BR sensible-editor
+tries, in order, are:
+.IP \(bu 2
+.B $VISUAL
+\(en see
 .BR environ (7)
-for documentation of the EDITOR, VISUAL variables
-.br
+.IP \(bu 2
+.B $EDITOR
+\(en see
+.BR environ (7)
+.IP \(bu 2
+.B $SENSIBLE_EDITOR
+.IP \(bu 2
+.B $SELECTED_EDITOR
+\(en see
 .BR select-editor (1)
-for changing a user's default editor.
-.br
-.BR editor (1)
-for default system wide editor.
-.SH BUGS
-This command is protected against trivial fork bomb, when user set
-.B EDITOR=sensible-editor
-wider loops are still possible.
-.SH "STANDARD"
-Documentation of behavior of sensible-utils under a debian system is available under
-section 11.4 of debian-policy usually installed under
-/usr/share/doc/debian-policy (you might need to install debian-policy)
+.IP \(bu 2
+.B editor
+\(en see
+.BR editor (1),
+.BR update-alternatives (1)
+.IP \(bu 2
+.BR nano (1)
+.IP \(bu 2
+.BR nano-tiny (1)
+.IP \(bu 2
+.BR vi (1)
+.PP
+If all of these fail,
+.BR sensible-editor
+errors out.
+This system is designed to make it easy for individual users to
+set a personal and/or temporary default, overriding the system-wide
+defaults.
+.SH "SEE ALSO"
+.BR sensible-browser (1),
+.BR sensible-pager (1),
+.BR select-editor (1),
+.BR environ (7),
+.BR editor (1),
+.BR \%update-alternatives (1)
+.SH "CONFORMING TO"
+The behavior of
+.B sensible-utils
+under a Debian system is documented in
+section 11.4 of Debian-Policy, available under
+/usr/share/doc/debian-policy if debian-policy is installed, or
+online at https://www.debian.org/doc/debian-policy/

@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+TEMPFILE=$(mktemp -p "")
+echo $TEMPFILE
+trap "rm -rf $TEMPFILE" HUP INT QUIT TERM STOP PWR EXIT
+
+# test if empty VISUAL correctly fails over to EDITOR
+VISUAL="" EDITOR="true" sensible-editor "$TEMPFILE"

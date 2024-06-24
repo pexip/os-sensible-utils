@@ -8,38 +8,39 @@
 #
 # Nicolas FRANÇOIS <nicolas.francois@centaliens.net>, 2004.
 # et savelog.8 (Antoine Gémis, 13 janvier 2003).
-# Bastien ROUCARIÈS <roucaries.bastien+debian@gmail.com>, 2017.
+# Bastien ROUCARIÈS <roucaries.bastien+debian@gmail.com>, 2017-2022.
+# Bastien Roucariès <rouca@debian.org>, 2022, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: debianutils\n"
-"POT-Creation-Date: 2021-08-07 15:21+0000\n"
-"PO-Revision-Date: 2017-08-10 22:25+0100\n"
-"Last-Translator: Bastien ROUCARIÈS <roucaries.bastien+debian@gmail.com>\n"
+"POT-Creation-Date: 2024-02-17 11:55+0100\n"
+"PO-Revision-Date: 2024-02-04 18:23+0000\n"
+"Last-Translator: Bastien Roucariès <rouca@debian.org>\n"
 "Language-Team: French <kde-i18n-doc@kde.org>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 # type: TH
 #. type: TH
-#: sensible-editor.man sensible-browser.man
+#: sensible-editor.man
 #, no-wrap
 msgid "SENSIBLE-EDITOR"
 msgstr "SENSIBLE-EDITOR"
 
 #. type: TH
-#: sensible-editor.man
+#: sensible-editor.man sensible-terminal.man
 #, no-wrap
-msgid "14 Nov 2018"
-msgstr "14 novembre 2018"
+msgid "28 Aug 2022"
+msgstr "28 août 2022"
 
 # type: TH
 #. type: TH
 #: sensible-editor.man sensible-browser.man sensible-pager.man
-#: select-editor.man
+#: select-editor.man sensible-terminal.man
 #, no-wrap
 msgid "Debian"
 msgstr "Debian GNU/Linux"
@@ -47,20 +48,20 @@ msgstr "Debian GNU/Linux"
 # type: SH
 #. type: SH
 #: sensible-editor.man sensible-browser.man sensible-pager.man
-#: select-editor.man
+#: select-editor.man sensible-terminal.man
 #, no-wrap
 msgid "NAME"
 msgstr "NOM"
 
 #. type: Plain text
 #: sensible-editor.man
-msgid "sensible-editor - sensible editing"
-msgstr "sensible-editor - edition pratique"
+msgid "sensible-editor - launch sensibly chosen text editor"
+msgstr "sensible-editor - lance un éditeur choisie de manière sensible"
 
 # type: SH
 #. type: SH
 #: sensible-editor.man sensible-browser.man sensible-pager.man
-#: select-editor.man
+#: select-editor.man sensible-terminal.man
 #, no-wrap
 msgid "SYNOPSIS"
 msgstr "SYNOPSIS"
@@ -74,7 +75,7 @@ msgstr "B<sensible-editor> [OPTIONS...]"
 # type: SH
 #. type: SH
 #: sensible-editor.man sensible-browser.man sensible-pager.man
-#: select-editor.man
+#: select-editor.man sensible-terminal.man
 #, no-wrap
 msgid "DESCRIPTION"
 msgstr "DESCRIPTION"
@@ -84,7 +85,7 @@ msgstr "DESCRIPTION"
 #: sensible-editor.man
 msgid ""
 "B<sensible-editor> makes sensible decisions on which editor to call.  "
-"Programs in Debian can use this script as their default editor."
+"Programs in Debian can invoke this script to get a good default editor."
 msgstr ""
 "B<sensible-editor> prend des décisions sensées sur le choix de l'éditeur "
 "qu'il faut appeler. Les programmes de la distribution Debian peuvent "
@@ -92,107 +93,145 @@ msgstr ""
 
 #. type: Plain text
 #: sensible-editor.man
-msgid "B<sensible-editor> try to do in the following order:"
-msgstr "B<sensible-editor> essaye de faire dans l'ordre suivant:"
-
-#. type: IP
-#: sensible-editor.man
-#, no-wrap
-msgid "\\n[step]"
-msgstr "\\n[step]"
-
-#. type: Plain text
-#: sensible-editor.man
-msgid "if B<VISUAL> environment variable exists, execute B<VISUAL [OPTIONS]>"
+msgid ""
+"B<sensible-editor> looks for an appropriate choice of editor in a series of "
+"places, and uses the first candidate that works.  It starts by checking "
+"environment variables, followed by a variable defined via B<select-editor,> "
+"then tries the default editor command defined by the alternatives system, "
+"with a series of hard-coded command names as fallbacks."
 msgstr ""
-"si la variable d'environement B<VISUAL> existe, exécute B<VISUAL [OPTIONS]>"
-
-#. type: IP
-#: sensible-editor.man
-#, no-wrap
-msgid "\\n+[step]"
-msgstr "\\n+[step]"
-
-#. type: Plain text
-#: sensible-editor.man
-msgid "if B<EDITOR> environment variable exists, execute B<EDITOR\\ [OPTIONS]>"
-msgstr ""
-"si la variable d'environement B<EDITOR> existe, exécute B<EDITOR\\ [OPTIONS]>"
+"B<sensible-editor> détermine un éditeur approprié en parcourant une liste "
+"d'éditeur et utilise le premier candidat de la liste qui fonctionne. Il "
+"commence par regarder dans des variables d'environnement, puis une variable "
+"définie par la commande B<select-editor>, puis essaye l'éditeur par défaut "
+"définie par l'alternative système, puis une serie de commande codée en dur "
+"comme liste de secours."
 
 #. type: Plain text
 #: sensible-editor.man
 msgid ""
-"source the contents of file I<~/.selected_editor> and, if B<SELECTED_EDITOR> "
-"environment variable exists execute B<SELECTED_EDITOR\\ [OPTIONS]>"
+"Variables will be skipped if unset or null, but may include extra whitespace-"
+"separated parameters such as a B<--verbose> flag.  Once B<sensible-editor> "
+"has a candidate commandline, it will try to run it (passing on the arguments "
+"it was given as the files to be edited).  If this fails because the command "
+"couldn't be executed (exit code 126)  or was not found (exit code 127), it "
+"tries the next candidate."
 msgstr ""
-"lit en tant que fichier source, le ficher I<~/.selected_editor> et, si la variable"
-"d'environement B<SELECTED_EDITOR> existe, exécute B<SELECTED_EDITOR\\ [OPTIONS]>"
+"Les variables ne sont pas utilisé, si elles sont déactivée ou vide, mais "
+"elle peuvent inclure des paramètres supplémentaires séparés par des espace "
+"comme des drapeaux B<--verbose>. Une fois que le script B<sensible-editor> "
+"récupère une ligne de commande candidate, il la lancera (passant ses propres "
+"arguments comme fichier à éditer). Si ce lancement échoue à cause d'une "
+"commande qui ne peut être exécuté (code de sortie 126) ou non trouvée (code "
+"de sortie 127), le script passera au candidat suivant."
 
 #. type: Plain text
 #: sensible-editor.man
-msgid "run B<editor [OPTIONS]> command"
-msgstr "exécute la commande B<editor [OPTIONS]>"
+msgid "The specific candidates B<sensible-editor> tries, in order, are:"
+msgstr ""
+"Les candidats spécifiques que sensible-editor essaye, sont dans l'ordre:"
+
+#. type: IP
+#: sensible-editor.man
+#, no-wrap
+msgid "\\(bu"
+msgstr "\\(bu"
 
 #. type: Plain text
 #: sensible-editor.man
-msgid "finally run B<nano-tiny [OPTIONS]> command"
-msgstr "enfin exécute la commande B<nano-tiny [OPTIONS]>"
+msgid "B<$VISUAL> \\(en see B<environ>(7)"
+msgstr "B<$VISUAL> \\\\(voir B<environ>(7)"
+
+#. type: Plain text
+#: sensible-editor.man
+msgid "B<$EDITOR> \\(en see B<environ>(7)"
+msgstr "B<$EDITOR> \\\\(voir B<environ>(7)"
+
+# type: TH
+#. type: Plain text
+#: sensible-editor.man
+msgid "B<$SENSIBLE_EDITOR>"
+msgstr "B<$SENSIBLE-EDITOR>"
+
+#. type: Plain text
+#: sensible-editor.man
+msgid "B<$SELECTED_EDITOR> \\(en see B<select-editor>(1)"
+msgstr "B<$SELECTED_EDITOR> \\\\(voir B<select-editor>(1)"
+
+#. type: Plain text
+#: sensible-editor.man
+msgid "B<editor> \\(en see B<editor>(1), B<update-alternatives>(1)"
+msgstr "B<editor> \\\\(voir B<editor>(1), B<update-alternatives>(1)"
+
+#. type: Plain text
+#: sensible-editor.man
+msgid "B<nano>(1)"
+msgstr "B<nano>(1)"
+
+#. type: Plain text
+#: sensible-editor.man
+msgid "B<nano-tiny>(1)"
+msgstr "B<nano-tiny>(1)"
+
+#. type: Plain text
+#: sensible-editor.man
+msgid "B<vi>(1)"
+msgstr "B<vi>(1)"
+
+#. type: Plain text
+#: sensible-editor.man
+msgid ""
+"If all of these fail, B<sensible-editor> errors out.  This system is "
+"designed to make it easy for individual users to set a personal and/or "
+"temporary default, overriding the system-wide defaults."
+msgstr ""
+"Si tous échoue,  sensible-editor affiche une erreur.  Ce script est destiné "
+"à facilement permettre pour un utilisateur individuel de positionner une "
+"préférence personnelle/ou temporaire comme défaut, surchargeant le défaut du "
+"système."
 
 # type: SH
 #. type: SH
-#: sensible-editor.man sensible-pager.man select-editor.man
+#: sensible-editor.man sensible-browser.man sensible-pager.man
+#: select-editor.man
 #, no-wrap
 msgid "SEE ALSO"
 msgstr "VOIR AUSSI"
 
 #. type: Plain text
 #: sensible-editor.man
-msgid "B<environ>(7)  for documentation of the EDITOR, VISUAL variables"
-msgstr "B<environ>(7) pour la documentation des variables EDITOR et VISUAL"
-
-#. type: Plain text
-#: sensible-editor.man
-msgid "B<select-editor>(1)  for changing a user's default editor."
-msgstr "B<select-editor>(1) pour changer l'éditeur par défaut d'un utilisateur"
-
-#. type: Plain text
-#: sensible-editor.man
-msgid "B<editor>(1)  for default system wide editor."
-msgstr "B<editor>(1) pour l'éditeur du système par défauts"
-
-#. type: SH
-#: sensible-editor.man
-#, no-wrap
-msgid "BUGS"
-msgstr "BOGUES"
-
-#. type: Plain text
-#: sensible-editor.man
 msgid ""
-"This command is protected against trivial fork bomb, when user set "
-"B<EDITOR=sensible-editor> wider loops are still possible."
+"B<sensible-browser>(1), B<sensible-pager>(1), B<select-editor>(1), "
+"B<environ>(7), B<editor>(1), B<\\%update-alternatives>(1)"
 msgstr ""
-"Cette commande est protégé contre les boucle d'excécution par appel fork(2), "
-"cependant boucles sont encore possibles si l'utilisateur utilise comme "
-"valeur B<EDITOR=sensible-editor>."
+"B<sensible-browser(1),> B<sensible-pager(1),> B<select-editor(1),> "
+"B<environ(7),> B<editor(1),> B<\\\\%update-alternatives(1)>"
 
 #. type: SH
-#: sensible-editor.man sensible-browser.man sensible-pager.man
+#: sensible-editor.man
 #, no-wrap
-msgid "STANDARD"
-msgstr "STANDARD"
+msgid "CONFORMING TO"
+msgstr "CONFORMITÉ"
 
 #. type: Plain text
-#: sensible-editor.man sensible-browser.man sensible-pager.man
+#: sensible-editor.man
 msgid ""
-"Documentation of behavior of sensible-utils under a debian system is "
-"available under section 11.4 of debian-policy usually installed under /usr/"
-"share/doc/debian-policy (you might need to install debian-policy)"
+"The behavior of B<sensible-utils> under a Debian system is documented in "
+"section 11.4 of Debian-Policy, available under /usr/share/doc/debian-policy "
+"if debian-policy is installed, or online at https://www.debian.org/doc/"
+"debian-policy/"
 msgstr ""
 "La documentation du comportement du paquet sensible-utils pour un système "
 "debian est disponible au titre 11.4 du manuel de la politique debian qui est "
 "usuellement installé sous /usr/share/doc/debian-policy (il convient "
 "d'installer le paquet debian-policy)"
+
+# type: TH
+#. type: TH
+#: sensible-browser.man
+#, no-wrap
+msgid "SENSIBLE-BROWSER"
+msgstr "SENSIBLE-BROWSER"
 
 #. type: TH
 #: sensible-browser.man sensible-pager.man
@@ -225,10 +264,39 @@ msgstr ""
 
 #. type: Plain text
 #: sensible-browser.man
-msgid "BROWSER environment variable could be set, and will be used if set."
+msgid ""
+"B<BROWSER> environment variable could be set, and will be used if set.  Any "
+"string acceptable as a command_string operand to the B<sh -c> command shall "
+"be valid (this is the same behavior of the B<EDITOR> variable as documented "
+"in B<\\%environ>(7))."
 msgstr ""
-"La varible d'environement BROWSER peut être positionnée, et sera utilisée si "
-"elle est positionnée."
+"La variable d'environnement B<BROWSER> peut être positionnée et sera utilisé "
+"si positionnée. Toute chaîne de caractère acceptable comme chaîne de "
+"commande pour la commande B<sh -c> est valide (ce qui est le même "
+"comportement que la variable B<EDITOR> comme documenté dans B<\\%environ>(7))."
+
+#. type: Plain text
+#: sensible-browser.man
+msgid "B<environ>(7)"
+msgstr "B<environ>(7)"
+
+#. type: SH
+#: sensible-browser.man sensible-pager.man sensible-terminal.man
+#, no-wrap
+msgid "STANDARD"
+msgstr "STANDARD"
+
+#. type: Plain text
+#: sensible-browser.man
+msgid ""
+"Documentation of behavior of sensible-utils under a debian system is "
+"available under section 11.4 of debian-policy usually installed under /usr/"
+"share/doc/debian-policy (you might need to install debian-policy)"
+msgstr ""
+"La documentation du comportement du paquet sensible-utils pour un système "
+"debian est disponible au titre 11.4 du manuel de la politique debian qui est "
+"usuellement installé sous /usr/share/doc/debian-policy (il convient "
+"d'installer le paquet debian-policy)"
 
 # type: TH
 #. type: TH
@@ -263,8 +331,21 @@ msgstr ""
 
 #. type: Plain text
 #: sensible-pager.man
-msgid "Documentation of the PAGER variable in B<environ>(7)"
-msgstr "Documentation de la variable d'environnement PAGER dans B<environ>(7)"
+msgid "Documentation of the B<PAGER> variable in B<environ>(7)"
+msgstr ""
+"Documentation de la variable d'environnement B<PAGER> dans B<environ>(7)"
+
+#. type: Plain text
+#: sensible-pager.man
+msgid ""
+"Documentation of behavior of B<sensible-utils> under a debian system is "
+"available under section 11.4 of debian-policy usually installed under /usr/"
+"share/doc/debian-policy (you might need to install debian-policy)"
+msgstr ""
+"La documentation du comportement du paquet B<sensible-utils> pour un système "
+"debian est disponible au titre 11.4 du manuel de la politique debian qui est "
+"usuellement installé sous /usr/share/doc/debian-policy (il convient "
+"d'installer le paquet debian-policy)"
 
 # type: TH
 #. type: TH
@@ -299,16 +380,19 @@ msgid ""
 "B<select-editor> provides a coherent mechanism for selecting and storing a "
 "preferred sensible-editor on a per-user basis.  It lists the available "
 "editors on a system and interactively prompts the user to select one.  The "
-"results are stored as SELECTED_EDITOR variable in ~/.selected_editor, which "
-"is sourced and used by B<sensible-editor> command.  SELECTED_EDITOR variable "
-"is overridden by the VISUAL and EDITOR environment variables."
+"results are stored as B<SELECTED_EDITOR> variable in \\%\\s+3~\\s-3/."
+"selected_editor, which is sourced and used by B<sensible-editor>(1)  "
+"command.  \\%SELECTED_EDITOR variable is overridden by the B<VISUAL> and "
+"B<EDITOR> environment variables."
 msgstr ""
-"B<select-editor> fournie un mécanisme cohérent pour sélectionner et stocker un "
-"sensible-editor préféré par utilisateur.  Il liste les editeurs disponibles "
-"sur le système et interactivement demande à un utilisateur d'en selectionner un.  Le "
-"resultat est stocké sous la variable SELECTED_EDITOR dans le fichier ~/.selected_editor, qui est lu "
-"comme source et utilise par la commande B<sensible-editor>.  La variable SELECTED_EDITOR "
-"est écrasée par les variables d'environement VISUAL and EDITOR."
+"B<select-editor> fournie un mécanisme cohérent pour sélectionner et stocker "
+"un B<sensible-editor> préféré par utilisateur.  Il liste les editeurs "
+"disponibles sur le système et interactivement demande à un utilisateur d'en "
+"selectionner un.  Le resultat est stocké sous la variable B<SELECTED_EDITOR> "
+"dans le fichier \\\\%\\\\s+3~\\\\s-3/.selected_editor, qui est lu comme "
+"source et utilise par la commande B<sensible-editor>(1).  La variable \\"
+"%SELECTED_EDITOR est écrasée par les variables d'environement B<VISUAL> and "
+"B<EDITOR>."
 
 #. type: SH
 #: select-editor.man
@@ -331,6 +415,202 @@ msgstr ""
 msgid "B<sensible-editor>(1)"
 msgstr "B<sensible-editor>(1)"
 
+# type: TH
+#. type: TH
+#: sensible-terminal.man
+#, no-wrap
+msgid "SENSIBLE-TERMINAL"
+msgstr "SENSIBLE-TERMINAL"
+
+#. type: Plain text
+#: sensible-terminal.man
+msgid "sensible-terminal - sensible terminal emulator"
+msgstr ""
+"sensible-terminal - lance un émulateur de terminal choisie de manière "
+"sensible."
+
+# B<sensible-terminal-emulator> [-T title] [--wait] [-e cmd...]
+#. type: Plain text
+#: sensible-terminal.man
+msgid "B<sensible-terminal> [-TI<title]>[--wait]I<[-e>cmd...]"
+msgstr "B<sensible-terminal> [-TI<title]>[--wait]I<[-e> cmd...]"
+
+#. type: Plain text
+#: sensible-terminal.man
+msgid ""
+"B<sensible-terminal-emulator> makes sensible decisions on which terminal "
+"emulator to call.  Programs in Debian can use this script as their default "
+"terminal emulator or emulate their behavior.  B<TERMINAL_EMULATOR> "
+"environment variable could be set, and will be used if set.  Any string "
+"acceptable as a command_string operand to the B<sh -c> command shall be "
+"valid."
+msgstr ""
+"B<sensible-terminal-emulator> prend des décisions sensées sur le choix du "
+"terminal qu'il faut appeler. Les programmes de la distribution Debian "
+"peuvent utiliser ce scripts comme leur émulateur de terminal par défaut ou "
+"émuler ce comportement.  La variable d'environement B<TERMINAL_EMULATOR> "
+"peut être positionné, et sera utilisé si positioné. Toute chaine acceptable "
+"comme opérateur de la commande B<sh -c> est valide comme commande"
+
+#. type: Plain text
+#: sensible-terminal.man
+msgid ""
+"Documentation of behavior of B<sensible-utils> under a debian system is "
+"available under sections 11.4-11.8 of debian-policy usually installed under /"
+"usr/share/doc/debian-policy (you might need to install debian-policy)"
+msgstr ""
+"La documentation du comportement du paquet B<sensible-utils> pour un système "
+"debian est disponible au titre 11.4-11.8 du manuel de la politique debian "
+"qui est usuellement installé sous /usr/share/doc/debian-policy (il convient "
+"d'installer le paquet debian-policy)"
+
+#, no-wrap
+#~ msgid "BUGS"
+#~ msgstr "BOGUES"
+
+#~ msgid ""
+#~ "This command takes precautions against launching itself in an infinite "
+#~ "loop if a user sets B<\\%EDITOR=sensible-editor> but indirect loops are "
+#~ "still possible."
+#~ msgstr ""
+#~ "Cette commande est protégé afin d'éviter de se lancer elle-même dans une "
+#~ "boucle infinie quand l'utilisateur positionne B<\\\\%EDITOR=sensible-"
+#~ "editor>, cependant des boucles indirectes sont encore possibles."
+
+#~ msgid "BROWSER environment variable could be set, and will be used if set."
+#~ msgstr ""
+#~ "La varible d'environement BROWSER peut être positionnée, et sera utilisée "
+#~ "si elle est positionnée."
+
+#, no-wrap
+#~ msgid "14 Nov 2018"
+#~ msgstr "14 novembre 2018"
+
+#~ msgid ""
+#~ "B<sensible-editor> looks for an editor in various places in the following "
+#~ "order:"
+#~ msgstr ""
+#~ "B<sensible-editor> recherche un éditeur à plusieurs endroit dans l'ordre "
+#~ "suivant:"
+
+#, no-wrap
+#~ msgid "\\n[step]"
+#~ msgstr "\\n[step]"
+
+#~ msgid ""
+#~ "if the B<VISUAL> environment variable exists, execute B<$VISUAL "
+#~ "[OPTIONS...];> if this fails, it continues to the next step"
+#~ msgstr ""
+#~ "si la variable d'environement B<VISUAL> existe, exécute B<VISUAL "
+#~ "[OPTIONS...]>; si cela échoue, continue vers l'étape suivante"
+
+#, no-wrap
+#~ msgid "\\n+[step]"
+#~ msgstr "\\n+[step]"
+
+#~ msgid ""
+#~ "if the B<EDITOR> environment variable exists, execute B<$EDITOR "
+#~ "[OPTIONS...];> if this fails, it continues to the next step"
+#~ msgstr ""
+#~ "si la variable d'environement B<EDITOR> existe, exécute B<EDITOR "
+#~ "[OPTIONS...]>; si cela échoue, continue vers l'étape suivante"
+
+#~ msgid ""
+#~ "if the B<SENSIBLE_EDITOR> environment variable exists, execute "
+#~ "B<$SENSIBLE_EDITOR [OPTIONS...];> if this fails, it continues to next step"
+#~ msgstr ""
+#~ "si la variable d'environement B<SENSIBLE_EDITOR> existe, exécute "
+#~ "B<SENSIBLE_EDITOR [OPTIONS...]>; si cela échoue, continue vers l'étape "
+#~ "suivante"
+
+#~ msgid ""
+#~ "source the contents of file I<~/.selected_editor> and, if the "
+#~ "B<SELECTED_EDITOR> environment variable exists, execute "
+#~ "B<$SELECTED_EDITOR [OPTIONS...];> if this fails, it continues to the next "
+#~ "step"
+#~ msgstr ""
+#~ "lit en tant que fichier source, le ficher I<~/.selected_editor> et, si la "
+#~ "variable d'environement B<SELECTED_EDITOR> existe, exécute "
+#~ "B<SELECTED_EDITOR [OPTIONS...]>; si cela échoue, continue vers l'étape "
+#~ "suivante"
+
+#~ msgid ""
+#~ "run the B<editor [OPTIONS...]> command; if this fails, it continues to "
+#~ "the next step command"
+#~ msgstr ""
+#~ "Exécute la commande B<editor [OPTIONS...]>; si cela échoue, continue vers "
+#~ "l'étape suivante"
+
+#~ msgid ""
+#~ "run the B<nano [OPTIONS...]> command; if this fails, it continues to the "
+#~ "next step"
+#~ msgstr ""
+#~ "Exécute la commande B<nano [OPTIONS...]>; si cela échoue, continue vers "
+#~ "l'étape suivante"
+
+#~ msgid ""
+#~ "run the B<nano-tiny [OPTIONS...]> command; if this fails, it continues to "
+#~ "the next step"
+#~ msgstr ""
+#~ "Exécute la commande B<nano-tiny [OPTIONS...]>; si cela échoue, continue "
+#~ "vers l'étape suivante"
+
+#~ msgid ""
+#~ "finally run the B<vi [OPTIONS...]> command; if this fails, it errors out."
+#~ msgstr ""
+#~ "Exécute la commande B<vi [OPTIONS...]>; si cela échoue, continue vers "
+#~ "l'étape suivante\""
+
+#, no-wrap
+#~ msgid "NOTES"
+#~ msgstr "NOTES"
+
+#~ msgid ""
+#~ "When B<sensible-editor> runs a command, variable substitutions are "
+#~ "unquoted, but the script's arguments are passed on as individually double-"
+#~ "quoted strings, as specified by B<environ>(7).  Technically, B<sensible-"
+#~ "editor> script executes I<sh\\ -c \"$CMD \\\\\"\\\\$@\\\\\"\" \"CMD\" "
+#~ "\"$@\"> where any string acceptable as a command-string operand to the "
+#~ "I<sh\\ -c> command is valid as I<$CMD.> The subshell I<$0> variable will "
+#~ "contain the name of the variable used, whether that's B<VISUAL,> B<EDITOR,"
+#~ "> or B<SENSIBLE_EDITOR.>"
+#~ msgstr ""
+#~ "Quand B<sensible-editor> exécute une commande, les substitutions de "
+#~ "variables ne sont pas protégé par des guillemets, mais les arguments du "
+#~ "script sont passés indivuellement comme des chaines protégés par "
+#~ "guillemets, comme spécifié par B<environ(7)>. Techniquement,  le script "
+#~ "B<sensible-editor> exécutes Ioù toute chaine acceptable comme opérateur "
+#~ "de la commande I<sh\\\\ -c> est valide comme I<$CMD.> Le sous shell "
+#~ "contiendra comme variable I<$0> le nom de l'éditeur utilisé, soit "
+#~ "B<VISUAL,> B<EDITOR,> ou B<SENSIBLE_EDITOR.>"
+
+#~ msgid ""
+#~ "An exit status of 126 (command is found but is not executable) or 127 "
+#~ "(given command is not found within your B<$PATH)> are considered as "
+#~ "indicating the failure of a command, for the purposes of sensible-editor."
+#~ msgstr ""
+#~ "Une valeur de sortie de commande de 126 (commande non trouvée ou non "
+#~ "exécutable) ou 127 (la commande n'est pas trouvé dans B<$PATH)> sont "
+#~ "considéré comme des échec de commande en ce qui conscerne le script "
+#~ "sensible-editor."
+
+#~ msgid ""
+#~ "B<environ>(7)  for documentation of the B<EDITOR,> B<VISUAL> variables"
+#~ msgstr "B<environ>(7) pour la documentation des variables EDITOR et VISUAL"
+
+#~ msgid "B<select-editor>(1)  for changing a user's default editor."
+#~ msgstr ""
+#~ "B<select-editor>(1) pour changer l'éditeur par défaut d'un utilisateur"
+
+#~ msgid "B<editor>(1)  for default system wide editor."
+#~ msgstr "B<editor>(1) pour l'éditeur du système par défauts"
+
+#~ msgid "run B<editor [OPTIONS]> command"
+#~ msgstr "exécute la commande B<editor [OPTIONS]>"
+
+#~ msgid "finally run B<nano-tiny [OPTIONS]> command"
+#~ msgstr "enfin exécute la commande B<nano-tiny [OPTIONS]>"
+
 # type: Plain text
 #~ msgid ""
 #~ "sensible-editor, sensible-pager, sensible-browser - sensible editing, "
@@ -338,4 +618,3 @@ msgstr "B<sensible-editor>(1)"
 #~ msgstr ""
 #~ "sensible-editor, sensible-pager, sensible-browser - outils pratiques "
 #~ "d'édition, de mise en page et de navigation sur le web"
-

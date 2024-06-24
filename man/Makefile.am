@@ -1,8 +1,8 @@
 # part of this makefile are copyied from dpkg
 AUTOMAKE_OPTIONS = foreign
 
-man_MANS = sensible-editor.1 sensible-browser.1 sensible-pager.1 select-editor.1
-EXTRA_DIST = sensible-editor.man sensible-browser.man sensible-pager.man select-editor.man
+man_MANS = sensible-editor.1 sensible-browser.1 sensible-pager.1 select-editor.1 sensible-terminal.1
+EXTRA_DIST = sensible-editor.man sensible-browser.man sensible-pager.man select-editor.man sensible-terminal.man
 
 # Extract the list of languages from the po4a config file.
 LINGUAS_DIST = `sed -ne 's/^.*\[po4a_langs\] \(.*\)$$/\1/p' $(srcdir)/po4a/po4a.cfg`
@@ -78,11 +78,11 @@ MANGEN = $(MANGEN_V) sed \
 	-e 's:%PKGDATADIR%:$(pkgdatadir):g'
 	$(nil)
 
-.man.1: Makefile
+.man.1:
 	$(MANGEN) $< >$@
-.man.5: Makefile
+.man.5:
 	$(MANGEN) $< >$@
-.man.8: Makefile
+.man.8:
 	$(MANGEN) $< >$@
 
 install-data-local: install-data-local-yes

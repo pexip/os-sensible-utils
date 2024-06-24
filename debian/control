@@ -2,25 +2,24 @@ Source: sensible-utils
 Section: utils
 Priority: required
 Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
-Build-Depends: debhelper-compat (= 12)
+Build-Depends: debhelper-compat (= 13)
 Build-Depends-Indep:
  po4a,
  ed <!nocheck>
 Uploaders: Bastien Roucariès <rouca@debian.org>
-Standards-Version: 4.5.0.2
+Rules-Requires-Root: no
+Standards-Version: 4.6.2
 Vcs-Git: https://salsa.debian.org/debian/sensible-utils.git
 Vcs-Browser: https://salsa.debian.org/debian/sensible-utils
 
 Package: sensible-utils
 Architecture: all
-Replaces: debianutils (<= 2.32.3),
- manpages-pl (<= 20060617-3~)
 Depends: ${misc:Depends}
 Multi-Arch: foreign
 Description: Utilities for sensible alternative selection
  This package provides a number of small utilities which are used
  by programs to sensibly select and spawn an appropriate browser,
- editor, or pager.
+ editor, pager, or terminal emulator.
  .
  The specific utilities included are: sensible-browser sensible-editor
- sensible-pager
+ sensible-pager sensible-terminal
