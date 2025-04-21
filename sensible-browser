@@ -24,7 +24,7 @@ if [ -n "$DISPLAY" ]; then
             Try "$@"
         done
     fi
-    for __sensible_candidate in x-www-browser "sensible-terminal www-browser"; do
+    for __sensible_candidate in x-www-browser "sensible-terminal -e www-browser"; do
         Try "$@"
     done
 else

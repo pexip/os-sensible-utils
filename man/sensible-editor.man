@@ -1,36 +1,41 @@
 .\" -*- nroff -*-
-.TH SENSIBLE-EDITOR 1 "28 Aug 2022" "Debian"
+.TH SENSIBLE-EDITOR 1 "28 Aug 2022" Debian
 .SH NAME
 sensible-editor \- launch sensibly chosen text editor
 .SH SYNOPSIS
 .B sensible-editor
-.RI [OPTIONS...]
+.RI [ OPTIONS ...]
 .SH DESCRIPTION
-.BR sensible-editor " makes sensible decisions on which editor to call.
+.B sensible-editor
+makes sensible decisions on which editor to call.
 Programs in Debian can invoke this script to get a good default editor.
 .PP
 .B sensible-editor
-looks for an appropriate choice of editor in a series
-of places, and uses the first candidate that works.
+looks for an appropriate choice of editor in a series of places,
+and uses the first candidate that works.
 It starts by checking environment variables,
 followed by a variable defined via
-.B select-editor,
+.BR select-editor ,
 then tries the default editor command defined by the alternatives system,
 with a series of hard-coded command names as fallbacks.
 .PP
-Variables will be skipped if unset or null, but may include extra
-whitespace-separated parameters such as a
+Variables will be skipped if unset or null,
+but may include extra whitespace-separated parameters such as a
 .B \-\-verbose
 flag.
 Once
-.BR sensible-editor
-has a candidate commandline, it will try to run
-it (passing on the arguments it was given as the files to be edited).
-If this fails because the command couldn't be executed (exit code 126)
-or was not found (exit code 127), it tries the next candidate.
+.B sensible-editor
+has a candidate commandline,
+it will try to run it
+(passing on the arguments it was given as the files to be edited).
+If this fails because the command couldn't be executed
+(exit code 126)
+or was not found
+(exit code 127),
+it tries the next candidate.
 .PP
 The specific candidates
-.BR sensible-editor
+.B sensible-editor
 tries, in order, are:
 .IP \(bu 2
 .B $VISUAL
@@ -59,11 +64,11 @@ tries, in order, are:
 .BR vi (1)
 .PP
 If all of these fail,
-.BR sensible-editor
+.B sensible-editor
 errors out.
 This system is designed to make it easy for individual users to
-set a personal and/or temporary default, overriding the system-wide
-defaults.
+set a personal and/or temporary default,
+overriding the system-wide defaults.
 .SH "SEE ALSO"
 .BR sensible-browser (1),
 .BR sensible-pager (1),
@@ -75,6 +80,7 @@ defaults.
 The behavior of
 .B sensible-utils
 under a Debian system is documented in
-section 11.4 of Debian-Policy, available under
-/usr/share/doc/debian-policy if debian-policy is installed, or
-online at https://www.debian.org/doc/debian-policy/
+section 11.4 of Debian-Policy,
+available under /usr/share/doc/debian-policy
+if debian-policy is installed,
+or online at https://www.debian.org/doc/debian-policy/

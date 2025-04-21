@@ -1,23 +1,25 @@
 .\" -*- nroff -*-
-.TH SENSIBLE-PAGER 1 "12 Jan 2020" "Debian"
+.TH SENSIBLE-PAGER 1 "12 Jan 2020" Debian
 .SH NAME
 sensible-pager \- sensible paging
 .SH SYNOPSIS
-.BR sensible-pager
-.RI [OPTIONS...]
+.B sensible-pager
+.RI [ OPTIONS ...]
 .SH DESCRIPTION
 .B sensible-pager
 makes sensible decisions on which pager to call.
 Programs in Debian can use this script
-as their default pager, or emulate their behavior.
+as their default pager,
+or emulate their behavior.
 .SH "SEE ALSO"
 Documentation of the
 .B PAGER
 variable in
 .BR environ (7)
-.SH "STANDARD"
+.SH STANDARD
 Documentation of behavior of
 .B sensible-utils
 under a debian system is available under
 section 11.4 of debian-policy usually installed under
-/usr/share/doc/debian-policy (you might need to install debian-policy)
+/usr/share/doc/debian-policy
+(you might need to install debian-policy)

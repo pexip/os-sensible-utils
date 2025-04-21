@@ -1,3 +1,11 @@
+sensible-utils (0.0.25) unstable; urgency=medium
+
+  * Bug fix: "Some remarks with editorial changes on man
+    pages", thanks to Bjarni Ingi Gislason
+    (Closes: #1092445, #1092452, #1092487, #1092489).
+
+ -- Bastien Roucariès <rouca@debian.org>  Mon, 21 Apr 2025 15:20:02 +0200
+
 sensible-utils (0.0.24) unstable; urgency=medium
 
   * Bug fix: "sensible-pager does not work with PAGER=sensible-pager",
