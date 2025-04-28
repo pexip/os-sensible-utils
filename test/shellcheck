@@ -1,0 +1,3 @@
+#!/bin/sh
+command -v shellcheck > /dev/null || exit 77
+exec shellcheck select-editor sensible-*

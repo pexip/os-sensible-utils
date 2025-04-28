@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+TEMPFILE=$(mktemp -p "")
+echo $TEMPFILE
+trap "rm -rf $TEMPFILE" HUP INT QUIT TERM STOP PWR EXIT
+
+# test if error in editor will be propagated
+VISUAL="false /nonexistant; true" sensible-editor "$TEMPFILE"

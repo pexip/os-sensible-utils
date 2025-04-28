@@ -1,6 +1,6 @@
 PO4A-HEADER:mode=after;position=^\.TH;beginboundary=^\.SH "SIEHE AUCH"
 .SH ÜBERSETZUNG
-Diese Übersetzung wurde 2011 von Helge Kreutzmann erstellt. Sie unterliegt
+Diese Übersetzung wurde 2011, 2017, 2021, 2023 von Helge Kreutzmann erstellt. Sie unterliegt
 der GNU GPL Version 2 (oder neuer).
 
 Um die englische Originalversion zu lesen, geben Sie »man -L C BEFEHL« ein.

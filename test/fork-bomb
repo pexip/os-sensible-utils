@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+TEMPFILE=$(mktemp -p "")
+echo $TEMPFILE
+trap "rm -rf $TEMPFILE" HUP INT QUIT TERM STOP PWR EXIT
+
+# test if attempting to run sensible-editor recursively is correctly ignored
+VISUAL='sensible-editor --' EDITOR=true timeout 0.2 sensible-editor "$TEMPFILE"
