@@ -1,3 +1,9 @@
+sensible-utils (0.0.25+pexip25u1) pexip-trixie; urgency=medium
+
+  * New upstream release
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Fri, 16 May 2025 10:49:12 +0100
+
 sensible-utils (0.0.25) unstable; urgency=medium
 
   * Bug fix: "Some remarks with editorial changes on man
